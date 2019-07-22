@@ -16,7 +16,7 @@
 <meta property="og:description" content="一、认识HTML5&amp;emsp;&amp;emsp;HTML5并不仅仅只是作为HTML标记语言的一个最新版本，更重要的是它制定了Web应用开发的一系列标准，成为第一个将Web做为应用开发平台的HTML语言。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://user-images.githubusercontent.com/36074045/59833524-ca3f1080-9378-11e9-8b50-7a4f139e51ac.jpg">
-<meta property="og:updated_time" content="2019-06-20T08:31:24.951Z">
+<meta property="og:updated_time" content="2019-07-22T01:54:04.929Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTML5笔记">
 <meta name="twitter:description" content="一、认识HTML5&amp;emsp;&amp;emsp;HTML5并不仅仅只是作为HTML标记语言的一个最新版本，更重要的是它制定了Web应用开发的一系列标准，成为第一个将Web做为应用开发平台的HTML语言。">
@@ -158,7 +158,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    12 分钟 读完 (大约 1761 个字)
+                    17 分钟 读完 (大约 2602 个字)
                 </span>
                 
                 
@@ -372,6 +372,115 @@
 </tr>
 </tbody>
 </table>
+<p><strong>novalidate</strong>：也可以在form里面设置，如果form里面是打开的，这个表单里面某一项是关的，那么就是全体打开，“某一项”关闭。novalidate是没有值的选项，也就是说，比如email属性必须要有@符号，否则是不能提交的，有了novalidate就可以不用验证就提交。<br><strong>autocomplete</strong>：<code>&lt;label for=&quot;&quot;&gt;autocomplete: &lt;input type=&quot;text&quot; name=&quot;autocomplete&quot; autocomplete=&quot;on&quot;&gt;&lt;/label&gt;</code>“自动完成”，可以用“on”“off”控制开关，输入name里面的内容后点击按钮提交，下次再输入该内容第一个字母就能显示。<br><strong>pattern</strong>:<code>&lt;label for=&quot;&quot;&gt;pattern: &lt;input type=&quot;text&quot; pattern=&quot;\D+&quot;&gt;&lt;/label&gt;</code>正则表达式：pattern=”\d+” 表示匹配1个或多个数字;pattern=”\D+” 表示匹配1个或多个非数字字</p>
+<h2 id="五、多媒体"><a href="#五、多媒体" class="headerlink" title="五、多媒体"></a>五、多媒体</h2><p>&emsp;&emsp;在HTML5之前，在网页上播放音频/视频的通用方法是利用Flash来播放，但是大多情况下，并非所有用户的浏览器都安装了Flash插件，由此使得处理音频/视频播放变的非常复杂，并且移动设备的浏览器并不支持Flash插件。</p>
+<h4 id="5-1音频"><a href="#5-1音频" class="headerlink" title="5.1音频"></a>5.1音频</h4><p>&emsp;&emsp;HTML5通过<code>&lt;audio&gt;</code>标签来解决音频播放的问题。<br><figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">audio</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"./music/See You Again.mp3"</span> <span class="hljs-attr">controls</span> <span class="hljs-attr">autoplay</span> <span class="hljs-attr">loop</span>=<span class="hljs-string">"3"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">audio</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>autoplay 自动播放<br>controls 是否显不默认播放控件<br>loop 循环播放<br>由于版权等原因，不同的浏览器可支持播放的格式是不一样的。当前，audio元素支持3种音频格式：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">ogg vorbis</th>
+<th style="text-align:center">mp3</th>
+<th style="text-align:center">wav</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">IE9</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">√</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">firefox3.5</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">√</td>
+</tr>
+<tr>
+<td style="text-align:center">opera10.5</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">√</td>
+</tr>
+<tr>
+<td style="text-align:center">chrome3.0</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">safari3.0</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">√</td>
+<td style="text-align:center">√</td>
+</tr>
+</tbody>
+</table>
+<p>多浏览器支持的方案<br><figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">audio</span> <span class="hljs-attr">controls</span>&gt;</span></span><br><span class="line">		<span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"./music/See You Again.mp3"</span>&gt;</span></span><br><span class="line">		<span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"./music/See You Again.wav"</span>&gt;</span></span><br><span class="line">		<span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"./music/See You Again.ogg"</span>&gt;</span></span><br><span class="line">		<span class="hljs-comment">&lt;!--浏览器不支持HTML5音频播放--&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">audio</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="5-2视频"><a href="#5-2视频" class="headerlink" title="5.2视频"></a>5.2视频</h4><p>HTML5通过<code>&lt;video&gt;</code>标签来解决音频播放的问题。<br><figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">video</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"./video/movie.mp4"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"800"</span> <span class="hljs-attr">controls</span> <span class="hljs-attr">autoplay</span> <span class="hljs-attr">loop</span>=<span class="hljs-string">"3"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>同样，通过附加属性可以更友好的控制视频的播放<br>autoplay 自动播放<br>controls 是否显示默认播放控件<br>loop 循环播放<br>width 设置播放窗口宽度<br>height 设置播放窗口的高度<br>由于版权等原因，不同的浏览器可支持播放的格式是不一样的</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">ogg</th>
+<th style="text-align:center">mp4</th>
+<th style="text-align:center">webm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">IE9</td>
+<td style="text-align:center">NO</td>
+<td style="text-align:center">9.0+</td>
+<td style="text-align:center">NO</td>
+</tr>
+<tr>
+<td style="text-align:center">firefox</td>
+<td style="text-align:center">3.5+</td>
+<td style="text-align:center">NO</td>
+<td style="text-align:center">4.0+</td>
+</tr>
+<tr>
+<td style="text-align:center">opera</td>
+<td style="text-align:center">10.5+</td>
+<td style="text-align:center">NO</td>
+<td style="text-align:center">10.6+</td>
+</tr>
+<tr>
+<td style="text-align:center">chrome</td>
+<td style="text-align:center">5.0+</td>
+<td style="text-align:center">5.0+</td>
+<td style="text-align:center">6.0+</td>
+</tr>
+<tr>
+<td style="text-align:center">safari</td>
+<td style="text-align:center">NO</td>
+<td style="text-align:center">3.0+</td>
+<td style="text-align:center">NO</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">video</span> <span class="hljs-attr">src</span>=<span class="hljs-string">""</span> <span class="hljs-attr">controls</span>&gt;</span></span><br><span class="line">		<span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"./video/movie.mp4"</span>&gt;</span></span><br><span class="line">		<span class="hljs-tag">&lt;<span class="hljs-name">source</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"./video/movie.ogg"</span>&gt;</span></span><br><span class="line">		<span class="hljs-comment">&lt;!--浏览器不支持HTML5视频播放--&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="六、DOM扩展"><a href="#六、DOM扩展" class="headerlink" title="六、DOM扩展"></a>六、DOM扩展</h2><h4 id="6-1获取元素"><a href="#6-1获取元素" class="headerlink" title="6.1获取元素"></a>6.1获取元素</h4><ul>
+<li>document.getElementsByClassName (‘class’) 通过类名获取元素，以伪数组形式存在。<code>有兼容性问题</code></li>
+<li>document.querySelector(‘selector’) 通过CSS选择器获取元素，符合匹配条件的第1个元素。</li>
+<li>document.querySelectorAll(‘selector’) 通过CSS选择器获取元素，以伪数组形式存在。</li>
+</ul>
+<h4 id="6-2类名操作"><a href="#6-2类名操作" class="headerlink" title="6.2类名操作"></a>6.2类名操作</h4><ul>
+<li>Node.classList.add(‘class’) 添加class</li>
+<li>Node.classList.remove(‘class’) 移除class</li>
+<li>Node.classList.toggle(‘class’) 切换class，有则移除，无则添加</li>
+<li>Node.classList.contains(‘class’) 检测是否存在class</li>
+</ul>
+<p>Node指一个有效的DOM节点，是一个通称。</p>
+<h4 id="6-3自定义属性"><a href="#6-3自定义属性" class="headerlink" title="6.3自定义属性"></a>6.3自定义属性</h4><p>&emsp;&emsp;在HTML5中我们可以自定义属性，其格式如下data-*=””，例如：data-info=”我是自定义属性”，通过Node.dataset[‘info’] 我们便可以获取到自定义的属性值。<br>&emsp;&emsp;Node.dataset是以<strong>对象</strong>形式存在的，当我们为同一个DOM节点指定了多个自定义属性时，Node.dataset则存储了所有的自定义属性的值。<br>&emsp;&emsp;假设某元素 <code>&lt;div id=&quot;demo&quot; data-name=&quot;itcast&quot; data-age=&quot;10&quot;&gt;</code><br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var demo = document.querySelector(&apos;#demo&apos;);</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>1、读取 demo.dataset[‘name’] 或者 demo.dataset[‘age’]</li>
+<li>2、设置demo.dataset[‘name’] = ‘web developer’</li>
+</ul>
 
         </div>
         
@@ -450,7 +559,7 @@
 
 
 
-<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left is-sticky">
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
     
         
 <div class="card widget">
@@ -489,7 +598,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        6
+                        7
                     </p>
                 </div>
             </div>
@@ -509,7 +618,7 @@
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        5
+                        6
                     </p>
                 </div>
             </div>
@@ -619,7 +728,7 @@
                 <span class="level-item">技术</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">4</span>
+                <span class="level-item tag">5</span>
             </span>
         </a></li>
             </ul>
@@ -633,13 +742,13 @@
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/HTML5/" style="font-size: 10px;">HTML5</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a> <a href="/tags/日常问题/" style="font-size: 10px;">日常问题</a> <a href="/tags/权力的游戏/" style="font-size: 20px;">权力的游戏</a>
+        <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/CSS3/" style="font-size: 10px;">CSS3</a> <a href="/tags/HTML5/" style="font-size: 10px;">HTML5</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a> <a href="/tags/日常问题/" style="font-size: 10px;">日常问题</a> <a href="/tags/权力的游戏/" style="font-size: 20px;">权力的游戏</a>
     </div>
 </div>
 
     
     
-        <div class="column-right-shadow is-hidden-widescreen is-sticky">
+        <div class="column-right-shadow is-hidden-widescreen ">
         
             
 <div class="card widget">
@@ -647,6 +756,25 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/07/22/css3note/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="https://user-images.githubusercontent.com/36074045/61610919-0d98e180-ac8d-11e9-9aaa-30fd2dcf69c7.jpg" alt="CSS3笔记">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-07-22T01:36:32.000Z">2019-07-22</time></div>
+                    <a href="/2019/07/22/css3note/" class="has-link-black-ter is-size-6">CSS3笔记</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/技术/">技术</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -709,7 +837,7 @@
             
             <a href="/2019/05/01/cssHoverBlend/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="https://user-images.githubusercontent.com/36074045/56984189-098e8380-6bb8-11e9-80b9-be01e6ff9a9f.jpg" alt="CSS图片hover效果以及CSS3混合模式">
+                    <img class="thumbnail" src="https://user-images.githubusercontent.com/36074045/61610919-0d98e180-ac8d-11e9-9aaa-30fd2dcf69c7.jpg" alt="CSS图片hover效果以及CSS3混合模式">
                 </p>
             </a>
             
@@ -717,25 +845,6 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-30T18:30:23.000Z">2019-05-01</time></div>
                     <a href="/2019/05/01/cssHoverBlend/" class="has-link-black-ter is-size-6">CSS图片hover效果以及CSS3混合模式</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/技术/">技术</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/04/25/createBlog/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="https://user-images.githubusercontent.com/36074045/56731093-34c63c80-678c-11e9-8d2f-ffe84ace0734.jpg" alt="如何搭建属于自己的个人网站">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T11:20:50.000Z">2019-04-25</time></div>
-                    <a href="/2019/04/25/createBlog/" class="has-link-black-ter is-size-6">如何搭建属于自己的个人网站</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/技术/">技术</a>
                     </p>
@@ -761,7 +870,7 @@
                     <span class="level-item">七月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -815,6 +924,13 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/CSS/">
                         <span class="tag">CSS</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/CSS3/">
+                        <span class="tag">CSS3</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -861,7 +977,7 @@
 
 
 
-<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right is-sticky">
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
     
         
 <div class="card widget">
@@ -869,6 +985,25 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/07/22/css3note/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="https://user-images.githubusercontent.com/36074045/61610919-0d98e180-ac8d-11e9-9aaa-30fd2dcf69c7.jpg" alt="CSS3笔记">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-07-22T01:36:32.000Z">2019-07-22</time></div>
+                    <a href="/2019/07/22/css3note/" class="has-link-black-ter is-size-6">CSS3笔记</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/技术/">技术</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -931,7 +1066,7 @@
             
             <a href="/2019/05/01/cssHoverBlend/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="https://user-images.githubusercontent.com/36074045/56984189-098e8380-6bb8-11e9-80b9-be01e6ff9a9f.jpg" alt="CSS图片hover效果以及CSS3混合模式">
+                    <img class="thumbnail" src="https://user-images.githubusercontent.com/36074045/61610919-0d98e180-ac8d-11e9-9aaa-30fd2dcf69c7.jpg" alt="CSS图片hover效果以及CSS3混合模式">
                 </p>
             </a>
             
@@ -939,25 +1074,6 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-30T18:30:23.000Z">2019-05-01</time></div>
                     <a href="/2019/05/01/cssHoverBlend/" class="has-link-black-ter is-size-6">CSS图片hover效果以及CSS3混合模式</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/技术/">技术</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/04/25/createBlog/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="https://user-images.githubusercontent.com/36074045/56731093-34c63c80-678c-11e9-8d2f-ffe84ace0734.jpg" alt="如何搭建属于自己的个人网站">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-04-25T11:20:50.000Z">2019-04-25</time></div>
-                    <a href="/2019/04/25/createBlog/" class="has-link-black-ter is-size-6">如何搭建属于自己的个人网站</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/技术/">技术</a>
                     </p>
@@ -983,7 +1099,7 @@
                     <span class="level-item">七月 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -1037,6 +1153,13 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/CSS/">
                         <span class="tag">CSS</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/CSS3/">
+                        <span class="tag">CSS3</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
