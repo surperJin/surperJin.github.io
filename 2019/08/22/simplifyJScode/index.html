@@ -2,24 +2,25 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>不知名艺术家</title>
+<title>JS精简代码集合 - 不知名艺术家</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="&amp;ensp;关于我 ◾ &amp;ensp;毕业于长江大学 ◾ &amp;ensp;喜欢摄影，也喜欢设计（其实就是个抠图仔。。） ◾ &amp;ensp;自认为“艺术家”，平时喜欢写写画画，当然是不知名的那一种~哈哈😂 ◾ &amp;ensp;努力成为一个有趣的人 &amp;ensp;联系 ◾ &amp;ensp;邮箱：willjin007@163.com">
-<meta property="og:type" content="website">
-<meta property="og:title" content="不知名艺术家">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+    <meta name="description" content="日历创建过去七天的数组，如果将代码中的减号换成加号，你将得到未来7天的数组集合1[...Array(7).keys()].map(days =&amp;gt; new Date(Date.now() - 86400000 * days));">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS精简代码集合">
+<meta property="og:url" content="http://yoursite.com/2019/08/22/simplifyJScode/index.html">
 <meta property="og:site_name" content="不知名艺术家">
-<meta property="og:description" content="&amp;ensp;关于我 ◾ &amp;ensp;毕业于长江大学 ◾ &amp;ensp;喜欢摄影，也喜欢设计（其实就是个抠图仔。。） ◾ &amp;ensp;自认为“艺术家”，平时喜欢写写画画，当然是不知名的那一种~哈哈😂 ◾ &amp;ensp;努力成为一个有趣的人 &amp;ensp;联系 ◾ &amp;ensp;邮箱：willjin007@163.com">
+<meta property="og:description" content="日历创建过去七天的数组，如果将代码中的减号换成加号，你将得到未来7天的数组集合1[...Array(7).keys()].map(days =&amp;gt; new Date(Date.now() - 86400000 * days));">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-05-08T03:47:46.317Z">
+<meta property="og:image" content="https://user-images.githubusercontent.com/36074045/63495737-0581cb00-c4f3-11e9-9c4e-67b6a84bc237.jpg">
+<meta property="og:updated_time" content="2019-08-22T08:12:52.513Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="不知名艺术家">
-<meta name="twitter:description" content="&amp;ensp;关于我 ◾ &amp;ensp;毕业于长江大学 ◾ &amp;ensp;喜欢摄影，也喜欢设计（其实就是个抠图仔。。） ◾ &amp;ensp;自认为“艺术家”，平时喜欢写写画画，当然是不知名的那一种~哈哈😂 ◾ &amp;ensp;努力成为一个有趣的人 &amp;ensp;联系 ◾ &amp;ensp;邮箱：willjin007@163.com">
-<meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
+<meta name="twitter:title" content="JS精简代码集合">
+<meta name="twitter:description" content="日历创建过去七天的数组，如果将代码中的减号换成加号，你将得到未来7天的数组集合1[...Array(7).keys()].map(days =&amp;gt; new Date(Date.now() - 86400000 * days));">
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/36074045/63495737-0581cb00-c4f3-11e9-9c4e-67b6a84bc237.jpg">
 
 
 
@@ -97,7 +98,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo1.svg" alt height="28">
+                <img src="/images/logo1.svg" alt="JS精简代码集合" height="28">
             
             </a>
         </div>
@@ -109,7 +110,7 @@
                 
                 <a class="navbar-item" href="/archives">归档</a>
                 
-                <a class="navbar-item is-active" href="/about">关于</a>
+                <a class="navbar-item" href="/about">关于</a>
                 
                 <a class="navbar-item" href="/album">相册</a>
                 
@@ -137,22 +138,65 @@
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
     
+    <div class="card-image">
+        <span class="image is-7by1">
+            <img class="thumbnail" src="https://user-images.githubusercontent.com/36074045/63495737-0581cb00-c4f3-11e9-9c4e-67b6a84bc237.jpg" alt="JS精简代码集合">
+        </span>
+    </div>
+    
     <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-22T06:41:46.000Z">2019-08-22</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/前端/">前端</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 分钟 读完 (大约 496 个字)
+                </span>
+                
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span>次访问
+                </span>
+                
+            </div>
+        </div>
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                
+                JS精简代码集合
             
         </h1>
         <div class="content">
-            <h2 id="ensp-关于我"><a href="#ensp-关于我" class="headerlink" title="&ensp;关于我"></a><i class="fas fa-quote-left fa-1x fa-pull-left"></i>&ensp;关于我</h2><hr>
-<p><img src="https://user-images.githubusercontent.com/36074045/57274800-f6efdf00-70ce-11e9-9cc3-a2b5aca793ae.jpg" alt><br>◾ &ensp;毕业于<a href="http://www.yangtzeu.edu.cn/" target="_blank" rel="noopener">长江大学</a><br></p>
-<p>◾ &ensp;喜欢摄影，也喜欢设计（其实就是个抠图仔。。）<br></p>
-<p>◾ &ensp;自认为“艺术家”，平时喜欢写写画画，当然是不知名的那一种~哈哈😂<br></p>
-<p>◾ &ensp;努力成为一个有趣的人<br></p>
-<h2 id="ensp-联系"><a href="#ensp-联系" class="headerlink" title="&ensp;联系"></a><i class="fas fa-quote-left fa-1x fa-pull-left"></i>&ensp;联系</h2><hr>
-<p>◾ &ensp;邮箱：<a href="mailto:willjin007@163.com" target="_blank" rel="noopener">willjin007@163.com</a><br></p>
+            <h2 id="日历"><a href="#日历" class="headerlink" title="日历"></a>日历</h2><p>创建过去七天的数组，如果将代码中的减号换成加号，你将得到未来7天的数组集合<br><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[...Array(<span class="hljs-number">7</span>).keys()].map(<span class="hljs-function"><span class="hljs-params">days</span> =&gt;</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-built_in">Date</span>.now() - <span class="hljs-number">86400000</span> * days));</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h2 id="生成随机ID"><a href="#生成随机ID" class="headerlink" title="生成随机ID"></a>生成随机ID</h2><p>生成长度为11的随机字母数字字符串<br><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-built_in">Math</span>.random().toString(<span class="hljs-number">36</span>).substring(<span class="hljs-number">2</span>);</span><br></pre></td></tr></table></figure></p>
+<h2 id="获取URL的查询参数"><a href="#获取URL的查询参数" class="headerlink" title="获取URL的查询参数"></a>获取URL的查询参数</h2><p>获取url的查询参数代码  ‘ ?foo = bar&amp;baz = bing ‘ 期望得到 { foo: bar, baz: bing }<br><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">q=&#123;&#125;;location.search.replace(<span class="hljs-regexp">/([^?&amp;=]+)=([^&amp;]+)/g</span>,(_,k,v)=&gt;q[k]=v);q;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">var</span> url = <span class="hljs-string">'?foo=bar&amp;baz=bin'</span></span><br><span class="line"><span class="hljs-keyword">var</span> q=&#123;&#125;</span><br><span class="line">url.replace(<span class="hljs-regexp">/([^?&amp;=]+)=([^&amp;]+)/g</span>,(_,k,v)=&gt;q[k]=v)</span><br><span class="line"><span class="hljs-built_in">console</span>.log(q) <span class="hljs-comment">// &#123;foo: "bar", baz: "bin"&#125;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="本地时间"><a href="#本地时间" class="headerlink" title="本地时间"></a>本地时间</h2><p>通过一堆HTML，您可以创建一个本地时间，其中包含您可以一口气读出的源代码，它每秒都会用当前时间更新页面<br><figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">body</span> = <span class="hljs-string">"setInterval(()=&gt;document.body.innerHTML=new Date().toLocaleString().slice(10,19))"</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="数组混淆"><a href="#数组混淆" class="headerlink" title="数组混淆"></a>数组混淆</h2><p>随机更改数组元素顺序，混淆数组<br><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(arr) =&gt; arr.slice().sort(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">Math</span>.random() - <span class="hljs-number">0.5</span>)</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">let</span> a = <span class="hljs-function">(<span class="hljs-params">arr</span>) =&gt;</span> arr.slice().sort(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">Math</span>.random() - <span class="hljs-number">0.5</span>)</span><br><span class="line"><span class="hljs-keyword">let</span> b = a([<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>])</span><br><span class="line"><span class="hljs-built_in">console</span>.log(b)</span><br></pre></td></tr></table></figure></p>
+<h2 id="生成随机十六进制代码（生成随机颜色）"><a href="#生成随机十六进制代码（生成随机颜色）" class="headerlink" title="生成随机十六进制代码（生成随机颜色）"></a>生成随机十六进制代码（生成随机颜色）</h2><p>使用JavaScript简洁代码生成随机十六进制代码，如：#c618b2<br><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-string">'#'</span> + <span class="hljs-built_in">Math</span>.floor(<span class="hljs-built_in">Math</span>.random() * <span class="hljs-number">0xffffff</span>).toString(<span class="hljs-number">16</span>).padEnd(<span class="hljs-number">6</span>, <span class="hljs-string">'0'</span>);</span><br></pre></td></tr></table></figure></p>
+<h2 id="一个面试题"><a href="#一个面试题" class="headerlink" title="一个面试题"></a>一个面试题</h2><p>这是一个臭名昭著的面试题，让你写出他的运行结果，受不了~<br><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//打印1到100这些数字。但是遇到数字为3的倍数的时候，打印“Fizz”替代数字，5的倍数用“Buzz”代替，既是3的倍数又是5的倍数打印“FizzBuzz”。</span></span><br><span class="line"><span class="hljs-keyword">for</span>(i=<span class="hljs-number">0</span>;++i&lt;<span class="hljs-number">101</span>;<span class="hljs-built_in">console</span>.log(i%<span class="hljs-number">5</span>?f||i:f+<span class="hljs-string">'Buzz'</span>))f=i%<span class="hljs-number">3</span>?<span class="hljs-string">''</span>:<span class="hljs-string">'Fizz'</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">var</span> y=[];</span><br><span class="line"><span class="hljs-keyword">for</span>(i=<span class="hljs-number">1</span>;i&lt;<span class="hljs-number">101</span>;i++)&#123;</span><br><span class="line">    <span class="hljs-keyword">if</span>(!(i%<span class="hljs-number">3</span>)&amp;&amp;!(i%<span class="hljs-number">5</span>))&#123;y.push(<span class="hljs-string">'FizzBuzz'</span>);&#125;</span><br><span class="line">    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!(i%<span class="hljs-number">3</span>))&#123;y.push(<span class="hljs-string">'Fizz'</span>);&#125;</span><br><span class="line">    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(!(i%<span class="hljs-number">5</span>))&#123;y.push(<span class="hljs-string">'Buzz'</span>);&#125;</span><br><span class="line">    <span class="hljs-keyword">else</span> &#123;y.push(i);&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-built_in">console</span>.log(y);</span><br></pre></td></tr></table></figure></p>
+<h2 id="数组去重"><a href="#数组去重" class="headerlink" title="数组去重"></a>数组去重</h2><p>这是一个原生的JS函数但是非常简洁，Set接受任何可迭代对象，如数组[1,2,3,3]，并删除重复项<br><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[...new <span class="hljs-built_in">Set</span>(arr)]</span><br></pre></td></tr></table></figure></p>
+<h2 id="创建特定大小的数组"><a href="#创建特定大小的数组" class="headerlink" title="创建特定大小的数组"></a>创建特定大小的数组</h2><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[...Array(<span class="hljs-number">3</span>).keys()]    <span class="hljs-comment">//[0, 1, 2]</span></span><br></pre></td></tr></table></figure>
+<p><code>转载自：https://juejin.im/post/5cc55eb5e51d456e577f93f0</code></p>
 
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/JavaScript/">JavaScript</a>
+                </div>
+            </div>
         </div>
         
         
@@ -192,6 +236,27 @@
 </div>
 
 
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/08/22/hiddenScroll/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">3种方法迅速实现CSS滚动技能</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/08/19/metaArr/">
+                <span class="level-item">一些常用的移动端meta属性</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
 
 
 </div>
@@ -916,7 +981,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo1.svg" alt height="28">
+                    <img src="/images/logo1.svg" alt="JS精简代码集合" height="28">
                 
                 </a>
                 <p class="is-size-7">

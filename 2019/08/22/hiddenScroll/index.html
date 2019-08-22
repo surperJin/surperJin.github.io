@@ -2,24 +2,25 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>不知名艺术家</title>
+<title>3种方法迅速实现CSS滚动技能 - 不知名艺术家</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="&amp;ensp;关于我 ◾ &amp;ensp;毕业于长江大学 ◾ &amp;ensp;喜欢摄影，也喜欢设计（其实就是个抠图仔。。） ◾ &amp;ensp;自认为“艺术家”，平时喜欢写写画画，当然是不知名的那一种~哈哈😂 ◾ &amp;ensp;努力成为一个有趣的人 &amp;ensp;联系 ◾ &amp;ensp;邮箱：willjin007@163.com">
-<meta property="og:type" content="website">
-<meta property="og:title" content="不知名艺术家">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+    <meta name="description" content="&amp;emsp;&amp;emsp;隐藏滚动条的同时还需要支持滚动，我们经常在前端开发中遇到这种情况，最容易想到的是加一个iscroll插件，但其实现在CSS也可以实现这个功能，我已经在很多地方使用了，下面一起看看这三种方法。">
+<meta name="keywords" content="CSS3">
+<meta property="og:type" content="article">
+<meta property="og:title" content="3种方法迅速实现CSS滚动技能">
+<meta property="og:url" content="http://yoursite.com/2019/08/22/hiddenScroll/index.html">
 <meta property="og:site_name" content="不知名艺术家">
-<meta property="og:description" content="&amp;ensp;关于我 ◾ &amp;ensp;毕业于长江大学 ◾ &amp;ensp;喜欢摄影，也喜欢设计（其实就是个抠图仔。。） ◾ &amp;ensp;自认为“艺术家”，平时喜欢写写画画，当然是不知名的那一种~哈哈😂 ◾ &amp;ensp;努力成为一个有趣的人 &amp;ensp;联系 ◾ &amp;ensp;邮箱：willjin007@163.com">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;隐藏滚动条的同时还需要支持滚动，我们经常在前端开发中遇到这种情况，最容易想到的是加一个iscroll插件，但其实现在CSS也可以实现这个功能，我已经在很多地方使用了，下面一起看看这三种方法。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-05-08T03:47:46.317Z">
+<meta property="og:image" content="https://user-images.githubusercontent.com/36074045/61610919-0d98e180-ac8d-11e9-9aaa-30fd2dcf69c7.jpg">
+<meta property="og:updated_time" content="2019-08-22T08:38:00.912Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="不知名艺术家">
-<meta name="twitter:description" content="&amp;ensp;关于我 ◾ &amp;ensp;毕业于长江大学 ◾ &amp;ensp;喜欢摄影，也喜欢设计（其实就是个抠图仔。。） ◾ &amp;ensp;自认为“艺术家”，平时喜欢写写画画，当然是不知名的那一种~哈哈😂 ◾ &amp;ensp;努力成为一个有趣的人 &amp;ensp;联系 ◾ &amp;ensp;邮箱：willjin007@163.com">
-<meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
+<meta name="twitter:title" content="3种方法迅速实现CSS滚动技能">
+<meta name="twitter:description" content="&amp;emsp;&amp;emsp;隐藏滚动条的同时还需要支持滚动，我们经常在前端开发中遇到这种情况，最容易想到的是加一个iscroll插件，但其实现在CSS也可以实现这个功能，我已经在很多地方使用了，下面一起看看这三种方法。">
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/36074045/61610919-0d98e180-ac8d-11e9-9aaa-30fd2dcf69c7.jpg">
 
 
 
@@ -97,7 +98,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo1.svg" alt height="28">
+                <img src="/images/logo1.svg" alt="3种方法迅速实现CSS滚动技能" height="28">
             
             </a>
         </div>
@@ -109,7 +110,7 @@
                 
                 <a class="navbar-item" href="/archives">归档</a>
                 
-                <a class="navbar-item is-active" href="/about">关于</a>
+                <a class="navbar-item" href="/about">关于</a>
                 
                 <a class="navbar-item" href="/album">相册</a>
                 
@@ -137,22 +138,62 @@
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
     
+    <div class="card-image">
+        <span class="image is-7by1">
+            <img class="thumbnail" src="https://user-images.githubusercontent.com/36074045/61610919-0d98e180-ac8d-11e9-9aaa-30fd2dcf69c7.jpg" alt="3种方法迅速实现CSS滚动技能">
+        </span>
+    </div>
+    
     <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-08-22T08:21:42.000Z">2019-08-22</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/前端/">前端</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分钟 读完 (大约 372 个字)
+                </span>
+                
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span>次访问
+                </span>
+                
+            </div>
+        </div>
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                
+                3种方法迅速实现CSS滚动技能
             
         </h1>
         <div class="content">
-            <h2 id="ensp-关于我"><a href="#ensp-关于我" class="headerlink" title="&ensp;关于我"></a><i class="fas fa-quote-left fa-1x fa-pull-left"></i>&ensp;关于我</h2><hr>
-<p><img src="https://user-images.githubusercontent.com/36074045/57274800-f6efdf00-70ce-11e9-9cc3-a2b5aca793ae.jpg" alt><br>◾ &ensp;毕业于<a href="http://www.yangtzeu.edu.cn/" target="_blank" rel="noopener">长江大学</a><br></p>
-<p>◾ &ensp;喜欢摄影，也喜欢设计（其实就是个抠图仔。。）<br></p>
-<p>◾ &ensp;自认为“艺术家”，平时喜欢写写画画，当然是不知名的那一种~哈哈😂<br></p>
-<p>◾ &ensp;努力成为一个有趣的人<br></p>
-<h2 id="ensp-联系"><a href="#ensp-联系" class="headerlink" title="&ensp;联系"></a><i class="fas fa-quote-left fa-1x fa-pull-left"></i>&ensp;联系</h2><hr>
-<p>◾ &ensp;邮箱：<a href="mailto:willjin007@163.com" target="_blank" rel="noopener">willjin007@163.com</a><br></p>
+            <p>&emsp;&emsp;隐藏滚动条的同时还需要支持滚动，我们经常在前端开发中遇到这种情况，最容易想到的是加一个iscroll插件，但其实现在CSS也可以实现这个功能，我已经在很多地方使用了，下面一起看看这三种方法。<br><a id="more"></a></p>
+<h3 id="方法1：计算滚动条宽度并隐藏起来"><a href="#方法1：计算滚动条宽度并隐藏起来" class="headerlink" title="方法1：计算滚动条宽度并隐藏起来"></a>方法1：计算滚动条宽度并隐藏起来</h3><figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"outer-container"</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"inner-container"</span>&gt;</span> ...... <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line">.outer-container&#123; </span><br><span class="line">    width: 360px; </span><br><span class="line">    height: 200px; </span><br><span class="line">    position: relative; </span><br><span class="line">    overflow: hidden; </span><br><span class="line">&#125;</span><br><span class="line">.inner-container&#123; </span><br><span class="line">    position: absolute; </span><br><span class="line">    left: 0; </span><br><span class="line">    top: 0; </span><br><span class="line">    right: -17px; </span><br><span class="line">    bottom: 0; </span><br><span class="line">    overflow-x: hidden; </span><br><span class="line">    overflow-y: scroll; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;这个代码巧妙的向右移动了17个像素，刚好等于滚动条的宽度。这个值是手动调试得来的。在chrome和IE没发现问题。</p>
+<h3 id="方法2：使用三个容器包围起来，不需要计算滚动条的宽度"><a href="#方法2：使用三个容器包围起来，不需要计算滚动条的宽度" class="headerlink" title="方法2：使用三个容器包围起来，不需要计算滚动条的宽度"></a>方法2：使用三个容器包围起来，不需要计算滚动条的宽度</h3><p>&emsp;&emsp;跟上面的思路差不多，只不过人家里面又加多了一个盒子，将内容限制在盒子里面了。这样子就看不到滚动条同时也可以滚动。<br><figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"outer-container"</span>&gt;</span> </span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"inner-container"</span>&gt;</span> </span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"content"</span>&gt;</span> ...... <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span> </span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span> </span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span> </span><br><span class="line">.element, .outer-container &#123; </span><br><span class="line">    width: 200px; </span><br><span class="line">    height: 200px; </span><br><span class="line">&#125;</span><br><span class="line">.outer-container &#123; </span><br><span class="line">    border: 5px solid purple; </span><br><span class="line">    position: relative; </span><br><span class="line">    overflow: hidden; </span><br><span class="line">&#125;</span><br><span class="line">.inner-container &#123; </span><br><span class="line">    position: absolute; </span><br><span class="line">    left: 0; </span><br><span class="line">    overflow-x: hidden; </span><br><span class="line">    overflow-y: scroll; </span><br><span class="line">&#125;</span><br><span class="line">.inner-container::-webkit-scrollbar &#123; </span><br><span class="line">    display: none; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="方法3：css隐藏滚动条"><a href="#方法3：css隐藏滚动条" class="headerlink" title="方法3：css隐藏滚动条"></a>方法3：css隐藏滚动条</h3><p>不兼容IE，做移动端的可以使用。<br><br>自定义滚动条的伪对象选择器::-webkit-scrollbar<br><strong>chrome 和Safari</strong><br><figure class="highlight css hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-selector-class">.element</span><span class="hljs-selector-pseudo">::-webkit-scrollbar</span> &#123; </span><br><span class="line">    <span class="hljs-attribute">width</span>: <span class="hljs-number">0</span> <span class="hljs-meta">!important</span> </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>IE 10+</strong><br><figure class="highlight css hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-selector-class">.element</span> &#123; </span><br><span class="line">    <span class="hljs-attribute">-ms-overflow-style</span>: none; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>Firefox</strong><br><figure class="highlight css hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-selector-class">.element</span> &#123; </span><br><span class="line">    <span class="hljs-attribute">overflow</span>: -moz-scrollbars-none; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><code>转载自：http://caibaojian.com/hide-scrollbar.html</code></p>
 
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/CSS3/">CSS3</a>
+                </div>
+            </div>
         </div>
         
         
@@ -192,6 +233,20 @@
 </div>
 
 
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/08/22/simplifyJScode/">
+                <span class="level-item">JS精简代码集合</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
 
 
 </div>
@@ -916,7 +971,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo1.svg" alt height="28">
+                    <img src="/images/logo1.svg" alt="3种方法迅速实现CSS滚动技能" height="28">
                 
                 </a>
                 <p class="is-size-7">
