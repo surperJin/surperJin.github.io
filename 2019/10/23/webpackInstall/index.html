@@ -2,24 +2,25 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>不知名艺术家</title>
+<title>webpack安装 - 不知名艺术家</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="&amp;ensp;前端 ▪ 前端工程规范 ▪ 开源中国 ▪ 凹凸实验室 ▪ 百度EUX ▪ 前端开发资源库 &amp;ensp;设计类 ▪ 免费可商用图库  pixitepixabayunsplashfoodiesfeed（美食图片）picjumbolifeofpix（高分辨率摄影图）gratisography（搞怪风格）stocksnap  ▪ 视频素材(免费可商用) ▪ 音频素材(免费可商用) ▪ 图片压缩">
-<meta property="og:type" content="website">
-<meta property="og:title" content="不知名艺术家">
-<meta property="og:url" content="http://yoursite.com/resource/index.html">
+    <meta name="description" content="一、初识webpack&amp;emsp;&amp;emsp;webpack是一个现代JavaScript应用程序的静态模块打包器(module bundler)。当webpack处理应用程序时，它会递归地构建一个依赖关系图(dependency graph)，其中包含应用程序需要的每个模块，然后将所有这些模块打包成一个或多个bundle。">
+<meta name="keywords" content="webpack4">
+<meta property="og:type" content="article">
+<meta property="og:title" content="webpack安装">
+<meta property="og:url" content="http://yoursite.com/2019/10/23/webpackInstall/index.html">
 <meta property="og:site_name" content="不知名艺术家">
-<meta property="og:description" content="&amp;ensp;前端 ▪ 前端工程规范 ▪ 开源中国 ▪ 凹凸实验室 ▪ 百度EUX ▪ 前端开发资源库 &amp;ensp;设计类 ▪ 免费可商用图库  pixitepixabayunsplashfoodiesfeed（美食图片）picjumbolifeofpix（高分辨率摄影图）gratisography（搞怪风格）stocksnap  ▪ 视频素材(免费可商用) ▪ 音频素材(免费可商用) ▪ 图片压缩">
+<meta property="og:description" content="一、初识webpack&amp;emsp;&amp;emsp;webpack是一个现代JavaScript应用程序的静态模块打包器(module bundler)。当webpack处理应用程序时，它会递归地构建一个依赖关系图(dependency graph)，其中包含应用程序需要的每个模块，然后将所有这些模块打包成一个或多个bundle。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-09-23T07:55:42.642Z">
+<meta property="og:image" content="https://user-images.githubusercontent.com/36074045/67406292-76735b00-f5e8-11e9-8545-bf4eb4aa2c1f.jpg">
+<meta property="og:updated_time" content="2019-10-23T14:59:21.943Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="不知名艺术家">
-<meta name="twitter:description" content="&amp;ensp;前端 ▪ 前端工程规范 ▪ 开源中国 ▪ 凹凸实验室 ▪ 百度EUX ▪ 前端开发资源库 &amp;ensp;设计类 ▪ 免费可商用图库  pixitepixabayunsplashfoodiesfeed（美食图片）picjumbolifeofpix（高分辨率摄影图）gratisography（搞怪风格）stocksnap  ▪ 视频素材(免费可商用) ▪ 音频素材(免费可商用) ▪ 图片压缩">
-<meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
+<meta name="twitter:title" content="webpack安装">
+<meta name="twitter:description" content="一、初识webpack&amp;emsp;&amp;emsp;webpack是一个现代JavaScript应用程序的静态模块打包器(module bundler)。当webpack处理应用程序时，它会递归地构建一个依赖关系图(dependency graph)，其中包含应用程序需要的每个模块，然后将所有这些模块打包成一个或多个bundle。">
+<meta name="twitter:image" content="https://user-images.githubusercontent.com/36074045/67406292-76735b00-f5e8-11e9-8545-bf4eb4aa2c1f.jpg">
 
 
 
@@ -97,7 +98,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo1.svg" alt height="28">
+                <img src="/images/logo1.svg" alt="webpack安装" height="28">
             
             </a>
         </div>
@@ -115,7 +116,7 @@
                 
                 <a class="navbar-item" href="/arts">书画</a>
                 
-                <a class="navbar-item is-active" href="/resource">资源</a>
+                <a class="navbar-item" href="/resource">资源</a>
                 
             </div>
             
@@ -137,45 +138,80 @@
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
     
+    <div class="card-image">
+        <span class="image is-7by1">
+            <img class="thumbnail" src="https://user-images.githubusercontent.com/36074045/67406292-76735b00-f5e8-11e9-8545-bf4eb4aa2c1f.jpg" alt="webpack安装">
+        </span>
+    </div>
+    
     <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-10-23T02:53:36.000Z">2019-10-23</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/前端/">前端</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4 分钟 读完 (大约 586 个字)
+                </span>
+                
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span>次访问
+                </span>
+                
+            </div>
+        </div>
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                
+                webpack安装
             
         </h1>
         <div class="content">
-            <h3 id="ensp-前端"><a href="#ensp-前端" class="headerlink" title="&ensp;前端"></a><i class="fas fa-quote-left fa-1x fa-pull-left"></i>&ensp;前端</h3><hr>
-<p>▪ <a href="https://haonancx.gitbooks.io/fees/content/" target="_blank" rel="noopener">前端工程规范</a></p>
-<p>▪ <a href="http://tool.oschina.net/" target="_blank" rel="noopener">开源中国</a></p>
-<p>▪ <a href="https://aotu.io/" target="_blank" rel="noopener">凹凸实验室</a></p>
-<p>▪ <a href="http://eux.baidu.com/" target="_blank" rel="noopener">百度EUX</a></p>
-<p>▪ <a href="https://www.awesomes.cn/" target="_blank" rel="noopener">前端开发资源库</a></p>
-<h3 id="ensp-设计类"><a href="#ensp-设计类" class="headerlink" title="&ensp;设计类"></a><i class="fas fa-quote-left fa-1x fa-pull-left"></i>&ensp;设计类</h3><hr>
-<p>▪ 免费可商用图库</p>
+            <h2 id="一、初识webpack"><a href="#一、初识webpack" class="headerlink" title="一、初识webpack"></a>一、初识webpack</h2><p>&emsp;&emsp;webpack是一个现代JavaScript应用程序的静态模块打包器(module bundler)。当webpack处理应用程序时，它会递归地构建一个依赖关系图(dependency graph)，其中包含应用程序需要的每个模块，然后将所有这些模块打包成一个或多个bundle。<br><a id="more"></a><br>&emsp;&emsp;Webpack4相比之前的版本，速度更快，大型项目节约90%构建时间，内置了更多默认配置，变更了许多API。<br>&emsp;&emsp;提升打包速度有两点：1.保证node.js版本尽量新；2.保证webpack版本尽量的新。</p>
 <blockquote>
-<p><a href="http://source.pixite.co/" target="_blank" rel="noopener">pixite</a><br><br><a href="https://pixabay.com/" target="_blank" rel="noopener">pixabay</a><br><br><a href="https://unsplash.com/" target="_blank" rel="noopener">unsplash</a><br><br><a href="https://www.foodiesfeed.com/" target="_blank" rel="noopener">foodiesfeed</a>（美食图片）<br><br><a href="https://picjumbo.com/" target="_blank" rel="noopener">picjumbo</a><br><br><a href="https://www.lifeofpix.com/gallery/" target="_blank" rel="noopener">lifeofpix</a>（高分辨率摄影图）<br><br><a href="https://gratisography.com/" target="_blank" rel="noopener">gratisography</a>（搞怪风格）<br><br><a href="https://stocksnap.io/" target="_blank" rel="noopener">stocksnap</a><br></p>
+<p>不推荐全局安装webpack，假如我有两个项目都用webpack打包，如果全局安装webpack，那它的版本号是固定的。假设我一个项目是通过webpack3.0进行配置的，另一个项目是通过webpack4.0进行配置的，如果全局安装4.0的话，那3.0这个项目是跑不起来的。假设3.0和4.0这两个项目是有依赖的，那么通过全局安装webpack这种方式是不可能运行起来的。</p>
 </blockquote>
-<p>▪ <a href="https://mixkit.co/" target="_blank" rel="noopener">视频素材</a>(免费可商用)</p>
-<p>▪ <a href="http://source.pixite.co/" target="_blank" rel="noopener">音频素材</a>(免费可商用)</p>
-<p>▪ <a href="https://tinypng.com/" target="_blank" rel="noopener">图片压缩工具</a></p>
-<p>▪ <a href="http://www.shufazidian.com/" target="_blank" rel="noopener">书法字典网</a></p>
-<p>▪ <a href="https://isoflat.com/" target="_blank" rel="noopener">2.5D风格矢量插画</a></p>
-<p>▪ <a href="https://undraw.co/illustrations" target="_blank" rel="noopener">扁平化风格插画</a></p>
-<p>▪ <a href="https://icons8.com/ouch?ref=lapaninja" target="_blank" rel="noopener">开源插画素材1</a></p>
-<p>▪ <a href="https://iradesign.io/gallery/illustrations" target="_blank" rel="noopener">开源插画素材2</a></p>
-<p>▪ <a href="https://mixkit.co/art/" target="_blank" rel="noopener">免费插画素材库</a></p>
-<p>▪ <a href="https://stubborn.fun/" target="_blank" rel="noopener">免费扁平元素</a></p>
-<p>▪ <a href="https://www.kapwing.com/404-illustrations" target="_blank" rel="noopener">免费404页面插画素材库</a></p>
-<h3 id="ensp-图标"><a href="#ensp-图标" class="headerlink" title="&ensp;图标"></a><i class="fas fa-quote-left fa-1x fa-pull-left"></i>&ensp;图标</h3><hr>
-<p>▪ <a href="https://tilda.cc/free-icons/" target="_blank" rel="noopener">tilda</a></p>
-<p>▪ <a href="https://www.iconfont.cn/collections/index?spm=a313x.7781069.1998910419.3" target="_blank" rel="noopener">iconfont</a></p>
-<p>▪ <a href="https://icomoon.io/app/#/select" target="_blank" rel="noopener">icomoon</a></p>
-<p>▪ <a href="https://www.iconfinder.com/" target="_blank" rel="noopener">iconfinder</a></p>
-<p>▪ <a href="https://icons8.cn/metro/" target="_blank" rel="noopener">icons8</a></p>
-<p>▪ <a href="http://fontawesome.dashgame.com/" target="_blank" rel="noopener">fontawesome</a></p>
-<p>▪ <a href="https://ikonate.com/" target="_blank" rel="noopener">Ikonate</a></p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run bundle  //打包命令</span><br></pre></td></tr></table></figure>
+<h2 id="二、安装"><a href="#二、安装" class="headerlink" title="二、安装"></a>二、安装</h2><ul>
+<li>新建一个文件夹“test”，在命令提示符中进入到该文件夹；</li>
+<li>$npm init</li>
+<li>打开package.json，删除main对应的配置项去掉并增加配置项private为true，script对象置为空</li>
+</ul>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;name&quot;: &quot;test&quot;,</span><br><span class="line">    &quot;version&quot;: &quot;1.0.0&quot;,</span><br><span class="line">    &quot;description&quot;: &quot;&quot;,</span><br><span class="line">    &quot;main&quot;: &quot;index.js&quot;,</span><br><span class="line">    &quot;script&quot;:&#123;</span><br><span class="line">        &quot;test&quot;:&quot;echo \&quot;Error:no test....&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;author&quot;: &quot;&quot;,</span><br><span class="line">    &quot;license&quot;: &quot;ISC&quot;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;name&quot;: &quot;test&quot;,</span><br><span class="line">    &quot;version&quot;: &quot;1.0.0&quot;,</span><br><span class="line">    &quot;description&quot;: &quot;&quot;,</span><br><span class="line">    &quot;private&quot;: true,</span><br><span class="line">    &quot;script&quot;: &#123;&#125;,</span><br><span class="line">    &quot;author&quot;: &quot;&quot;,</span><br><span class="line">    &quot;license&quot;: &quot;ISC&quot;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>全局安装：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install webpack webpack-cli -g</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>局部安装：进入项目文件夹</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install webpack-cli --save-dev</span><br><span class="line">npm install webpack --save-dev</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>局部安装的webpack查找版本号是找不到的，因为node会从全局找。所以可以用npx来找：npx webpack -v</p>
+</li>
+<li>安装制定版本：</li>
+</ul>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install webpack@4.41.0 webpack-cli -D</span><br></pre></td></tr></table></figure>
+<h2 id="三、入口文件"><a href="#三、入口文件" class="headerlink" title="三、入口文件"></a>三、入口文件</h2><p>在webpack.config.js文件中：<br><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">const path = require(&quot;path&quot;);</span><br><span class="line">modele.exports = &#123;</span><br><span class="line">    mode: &quot;production&quot;,</span><br><span class="line">    entry:&#123;</span><br><span class="line">        main:&quot;./src/index.js&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    output:&#123;</span><br><span class="line">        filename:&quot;bundle.js&quot;,</span><br><span class="line">        path:path.resolve(_dirname,&quot;dist&quot;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>mode可以设置production或development。mode不设置的话其实和设置为production是一样的，都压缩。只是会有警告，production则不会有警告。<br>development的话不会压缩文件，可以直接在浏览器上打开。</p>
 
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/webpack4/">webpack4</a>
+                </div>
+            </div>
         </div>
         
         
@@ -215,6 +251,20 @@
 </div>
 
 
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/10/07/MaclehoseTrail/">
+                <span class="level-item">麦理浩径</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
 
 
 </div>
@@ -1030,7 +1080,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo1.svg" alt height="28">
+                    <img src="/images/logo1.svg" alt="webpack安装" height="28">
                 
                 </a>
                 <p class="is-size-7">
