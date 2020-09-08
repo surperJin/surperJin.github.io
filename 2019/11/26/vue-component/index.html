@@ -2,7 +2,7 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>vue组件 - 不知名艺术家</title>
+<title>vue组件 - jin</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
@@ -12,11 +12,11 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue组件">
 <meta property="og:url" content="http://yoursite.com/2019/11/26/vue-component/index.html">
-<meta property="og:site_name" content="不知名艺术家">
+<meta property="og:site_name" content="jin">
 <meta property="og:description" content="目录 ◽ 组件使用中的细节◽ 父子组件的数据传递◽ 组件参数校验与非props特性◽ 给组件绑定原生事件◽ 非父子组件间的传值（bus/总线/发布订阅模式/观察者模式）◽ 在vue中使用插槽◽ vue中的作用域插槽◽ 动态组件与v-once指令">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://user-images.githubusercontent.com/36074045/67406289-75dac480-f5e8-11e9-9636-3e53b8a01957.jpg">
-<meta property="og:updated_time" content="2019-11-28T03:50:29.217Z">
+<meta property="og:updated_time" content="2019-11-30T05:10:55.183Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue组件">
 <meta name="twitter:description" content="目录 ◽ 组件使用中的细节◽ 父子组件的数据传递◽ 组件参数校验与非props特性◽ 给组件绑定原生事件◽ 非父子组件间的传值（bus/总线/发布订阅模式/观察者模式）◽ 在vue中使用插槽◽ vue中的作用域插槽◽ 动态组件与v-once指令">
@@ -213,7 +213,7 @@
 <p>&emsp;&emsp;插槽有一个，具名插槽可以有多个<br><figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"root"</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">child</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"header"</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"header"</span>&gt;</span>header<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"footer"</span> <span class="hljs-attr">slot</span>=<span class="hljs-string">"footer"</span>&gt;</span>footer<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">child</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Vue.component(<span class="hljs-string">'child'</span>,&#123;</span><br><span class="line">    template: <span class="hljs-string">`&lt;div&gt;</span></span><br><span class="line"><span class="hljs-string">                   &lt;slot name="header"&gt;默认内容&lt;/slot&gt;</span></span><br><span class="line"><span class="hljs-string">                   &lt;p&gt;你好&lt;/p&gt;</span></span><br><span class="line"><span class="hljs-string">                   &lt;slot name="footer"&gt;默认内容&lt;/slot&gt;</span></span><br><span class="line"><span class="hljs-string">               &lt;/div&gt;`</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="hljs-string">"#root"</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>展示效果：<br>header<br>你好<br>footer</p>
-<h2 id="七、vue中的作用域插槽"><a href="#七、vue中的作用域插槽" class="headerlink" title="七、vue中的作用域插槽"></a>七、vue中的作用域插槽</h2><p>&emsp;&emsp;当子组件循环或者某一部分dom结构应该由外部传递进来的时候需要用到作用域插槽。<br>作用域插槽必须是在template标签里面的，且从子组件接受的数据都放在slot-scope里。当子组件用slot的时候，slot传递一个item这样的一个数据，数据放在了slot-scope的jin里面（可以自定义取名）。<br><figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"root"</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">child</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">slot-scope</span>=<span class="hljs-string">"props"</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>&#123;&#123;props.item&#125;&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">child</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="七、vue中的作用域插槽"><a href="#七、vue中的作用域插槽" class="headerlink" title="七、vue中的作用域插槽"></a>七、vue中的作用域插槽</h2><p>&emsp;&emsp;当子组件循环或者某一部分dom结构应该由外部传递进来的时候需要用到作用域插槽。<br>作用域插槽必须是在template标签里面的，且从子组件接受的数据都放在slot-scope里。当子组件用slot的时候，slot传递一个item这样的一个数据，数据放在了slot-scope的jin里面（可以自定义取名）。<br><figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"root"</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">child</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">template</span> <span class="hljs-attr">slot-scope</span>=<span class="hljs-string">"jin"</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>&#123;&#123;jin.item&#125;&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;/<span class="hljs-name">template</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">child</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Vue.component(<span class="hljs-string">'child'</span>,&#123;</span><br><span class="line">    data:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>&#123;</span><br><span class="line">        <span class="hljs-keyword">return</span>&#123;</span><br><span class="line">            list:[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>]</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    template: <span class="hljs-string">`&lt;div&gt;</span></span><br><span class="line"><span class="hljs-string">                   &lt;ul&gt;</span></span><br><span class="line"><span class="hljs-string">                       &lt;slot v-for="item of list" :item="item"&gt;&lt;/slot&gt;</span></span><br><span class="line"><span class="hljs-string">                   &lt;/ul&gt;</span></span><br><span class="line"><span class="hljs-string">               &lt;/div&gt;`</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue(&#123;</span><br><span class="line">    el:<span class="hljs-string">'#root'</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <h2 id="八、动态组件与v-once指令"><a href="#八、动态组件与v-once指令" class="headerlink" title="八、动态组件与v-once指令"></a>八、动态组件与v-once指令</h2><p>点击按钮实现child-one和child-two的toggle效果<br><figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"root"</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">child-one</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">"type === 'child-one'"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">child-one</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">child-two</span> <span class="hljs-attr">v-if</span>=<span class="hljs-string">"type === 'child-two'"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">child-two</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> @<span class="hljs-attr">click</span>=<span class="hljs-string">"clickHandel"</span>&gt;</span>change<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Vue.component(<span class="hljs-string">'child-one'</span>,&#123;</span><br><span class="line">    template:<span class="hljs-string">'&lt;div&gt;child-one&lt;/div&gt;'</span></span><br><span class="line">&#125;);</span><br><span class="line">Vue.component(<span class="hljs-string">'child-two'</span>,&#123;</span><br><span class="line">    template:<span class="hljs-string">'&lt;div&gt;child-two&lt;/div&gt;'</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="hljs-keyword">var</span> vm = <span class="hljs-keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="hljs-string">"#root"</span>,</span><br><span class="line">    data:&#123;</span><br><span class="line">        type: <span class="hljs-string">'child-one'</span></span><br><span class="line">    &#125;,</span><br><span class="line">    methods:&#123;</span><br><span class="line">        clickHandel:<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>&#123;</span><br><span class="line">            <span class="hljs-keyword">this</span>.type = <span class="hljs-keyword">this</span>.type === <span class="hljs-string">'child-one'</span> ? <span class="hljs-string">'child-two'</span>:<span class="hljs-string">'child-one'</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
@@ -336,7 +336,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        18
+                        20
                     </p>
                 </div>
             </div>
@@ -346,7 +346,7 @@
                         分类
                     </p>
                     <p class="title has-text-weight-normal">
-                        6
+                        7
                     </p>
                 </div>
             </div>
@@ -356,7 +356,7 @@
                         标签
                     </p>
                     <p class="title has-text-weight-normal">
-                        13
+                        14
                     </p>
                 </div>
             </div>
@@ -485,7 +485,7 @@
                 <span class="level-item">开发</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">2</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/影视/">
@@ -494,6 +494,14 @@
             </span>
             <span class="level-end">
                 <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/总结/">
+            <span class="level-start">
+                <span class="level-item">总结</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/摄影/">
@@ -523,7 +531,7 @@
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/CSS3/" style="font-size: 15px;">CSS3</a> <a href="/tags/HTML5/" style="font-size: 10px;">HTML5</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/VUE/" style="font-size: 20px;">VUE</a> <a href="/tags/meta/" style="font-size: 10px;">meta</a> <a href="/tags/webpack4/" style="font-size: 15px;">webpack4</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a> <a href="/tags/摄影/" style="font-size: 10px;">摄影</a> <a href="/tags/日常问题/" style="font-size: 10px;">日常问题</a> <a href="/tags/权力的游戏/" style="font-size: 15px;">权力的游戏</a> <a href="/tags/杭州/" style="font-size: 10px;">杭州</a> <a href="/tags/麦理浩径/" style="font-size: 10px;">麦理浩径</a>
+        <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/CSS3/" style="font-size: 15px;">CSS3</a> <a href="/tags/HTML5/" style="font-size: 10px;">HTML5</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/VUE/" style="font-size: 20px;">VUE</a> <a href="/tags/meta/" style="font-size: 10px;">meta</a> <a href="/tags/webpack4/" style="font-size: 15px;">webpack4</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a> <a href="/tags/总结/" style="font-size: 10px;">总结</a> <a href="/tags/摄影/" style="font-size: 10px;">摄影</a> <a href="/tags/日常问题/" style="font-size: 15px;">日常问题</a> <a href="/tags/权力的游戏/" style="font-size: 15px;">权力的游戏</a> <a href="/tags/杭州/" style="font-size: 10px;">杭州</a> <a href="/tags/麦理浩径/" style="font-size: 10px;">麦理浩径</a>
     </div>
 </div>
 
@@ -537,6 +545,44 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2020/01/16/eslintNotice/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="eslint错误提示">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-16T08:38:47.000Z">2020-01-16</time></div>
+                    <a href="/2020/01/16/eslintNotice/" class="has-link-black-ter is-size-6">eslint错误提示</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/开发/">开发</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/12/30/2019summary/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="https://cdn.stocksnap.io/img-thumbs/280h/6YLKY6CUWI.jpg" alt="2019总结-2020计划清单">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-30T10:19:18.000Z">2019-12-30</time></div>
+                    <a href="/2019/12/30/2019summary/" class="has-link-black-ter is-size-6">2019总结-2020计划清单</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/总结/">总结</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -595,44 +641,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/10/31/webpackCore/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="https://user-images.githubusercontent.com/36074045/67406292-76735b00-f5e8-11e9-8545-bf4eb4aa2c1f.jpg" alt="webpack核心概念">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-31T08:29:10.000Z">2019-10-31</time></div>
-                    <a href="/2019/10/31/webpackCore/" class="has-link-black-ter is-size-6">webpack核心概念</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/前端/">前端</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/10/30/vueBasicKnowledge/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="https://user-images.githubusercontent.com/36074045/67406289-75dac480-f5e8-11e9-9636-3e53b8a01957.jpg" alt="vue起步">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-30T07:01:26.000Z">2019-10-30</time></div>
-                    <a href="/2019/10/30/vueBasicKnowledge/" class="has-link-black-ter is-size-6">vue起步</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/前端/">前端</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -644,6 +652,28 @@
             归档
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/01/">
+                <span class="level-start">
+                    <span class="level-item">一月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/11/">
@@ -792,6 +822,13 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/总结/">
+                        <span class="tag">总结</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/摄影/">
                         <span class="tag">摄影</span>
                         <span class="tag is-grey">1</span>
@@ -801,7 +838,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/日常问题/">
                         <span class="tag">日常问题</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -851,6 +888,44 @@
         
         <article class="media">
             
+            <a href="/2020/01/16/eslintNotice/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="eslint错误提示">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-01-16T08:38:47.000Z">2020-01-16</time></div>
+                    <a href="/2020/01/16/eslintNotice/" class="has-link-black-ter is-size-6">eslint错误提示</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/开发/">开发</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2019/12/30/2019summary/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="https://cdn.stocksnap.io/img-thumbs/280h/6YLKY6CUWI.jpg" alt="2019总结-2020计划清单">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-30T10:19:18.000Z">2019-12-30</time></div>
+                    <a href="/2019/12/30/2019summary/" class="has-link-black-ter is-size-6">2019总结-2020计划清单</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/总结/">总结</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/11/28/hangZhouTouristSpots/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="https://images.unsplash.com/photo-1518471683746-63f3aff4ed13?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1050&amp;q=80" alt="在杭州，还有这些地方可以去">
@@ -906,44 +981,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/10/31/webpackCore/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="https://user-images.githubusercontent.com/36074045/67406292-76735b00-f5e8-11e9-8545-bf4eb4aa2c1f.jpg" alt="webpack核心概念">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-31T08:29:10.000Z">2019-10-31</time></div>
-                    <a href="/2019/10/31/webpackCore/" class="has-link-black-ter is-size-6">webpack核心概念</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/前端/">前端</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2019/10/30/vueBasicKnowledge/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="https://user-images.githubusercontent.com/36074045/67406289-75dac480-f5e8-11e9-9636-3e53b8a01957.jpg" alt="vue起步">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-10-30T07:01:26.000Z">2019-10-30</time></div>
-                    <a href="/2019/10/30/vueBasicKnowledge/" class="has-link-black-ter is-size-6">vue起步</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/前端/">前端</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -955,6 +992,28 @@
             归档
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/01/">
+                <span class="level-start">
+                    <span class="level-item">一月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/12/">
+                <span class="level-start">
+                    <span class="level-item">十二月 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2019/11/">
@@ -1103,6 +1162,13 @@
                 </div>
                 
                 <div class="control">
+                    <a class="tags has-addons" href="/tags/总结/">
+                        <span class="tag">总结</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
                     <a class="tags has-addons" href="/tags/摄影/">
                         <span class="tag">摄影</span>
                         <span class="tag is-grey">1</span>
@@ -1112,7 +1178,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/日常问题/">
                         <span class="tag">日常问题</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -1158,7 +1224,7 @@
                 
                 </a>
                 <p class="is-size-7">
-                &copy; 2019 jin&nbsp;
+                &copy; 2020 不知名艺术家&nbsp;
                 Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
                 
                 <br>
