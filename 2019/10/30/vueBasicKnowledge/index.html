@@ -182,7 +182,7 @@
 
 <p><br><br>MVVM设计模式：<br><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1572430354246&amp;di=d81cfb17577440c4363b28566cb5b18f&amp;imgtype=0&amp;src=http%3A%2F%2Fs6.sinaimg.cn%2Fmw690%2F002If1Mfzy78a9AzwA5c5%26690" alt><br>相比之下，MVVM设计模式的优点：</p>
 <p>1.<strong>低耦合</strong>。视图（View）可以独立于Model变化和修改，一个ViewModel可以绑定到不同的”View”上，当View变化的时候Model可以不变，当Model变化的时候View也可以不变。<br><br>2.<strong>可重用性</strong>。你可以把一些视图逻辑放在一个ViewModel里面，让很多view重用这段视图逻辑。<br><br>3.<strong>独立开发</strong>。开发人员可以专注于业务逻辑和数据的开发（ViewModel），设计人员可以专注于页面设计，使用Expression Blend可以很容易设计界面并生成xaml代码。<br><br>4.<strong>可测试</strong>。界面素来是比较难于测试的，而现在测试可以针对ViewModel来写。</p>
-<h2 id="二、实例"><a href="#二、实例" class="headerlink" title="二、实例"></a>二、实例</h2><p>&emsp;&emsp;每一个应用都是通过vue这个构造函数创建根实例（root instance）启动<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> vue (选项对象)</span><br></pre></td></tr></table></figure></p>
+<h2 id="二、实例"><a href="#二、实例" class="headerlink" title="二、实例"></a>二、实例</h2><p>&emsp;&emsp;每一个应用都是通过vue这个构造函数创建根实例（root instance）启动<br><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">new</span> vue (选项对象)</span><br></pre></td></tr></table></figure></p>
 <p>&emsp;&emsp;需要传入选项对象，对象包括挂载元素、数据、模板、方法等。</p>
 <table>
 <thead>
@@ -402,7 +402,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        20
+                        21
                     </p>
                 </div>
             </div>
@@ -482,12 +482,12 @@
             </li>
         
             <li>
-                <a class="level is-mobile" href="https://itpoet.cn/" target="_blank">
+                <a class="level is-mobile" href="https://xpoet.cn/" target="_blank">
                     <span class="level-left">
                         <span class="level-item">IT诗人</span>
                     </span>
                     <span class="level-right">
-                        <span class="level-item tag">itpoet.cn</span>
+                        <span class="level-item tag">xpoet.cn</span>
                     </span>
                 </a>
             </li>
@@ -551,7 +551,7 @@
                 <span class="level-item">开发</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">2</span>
+                <span class="level-item tag">3</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/影视/">
@@ -597,7 +597,7 @@
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/CSS3/" style="font-size: 15px;">CSS3</a> <a href="/tags/HTML5/" style="font-size: 10px;">HTML5</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/VUE/" style="font-size: 20px;">VUE</a> <a href="/tags/meta/" style="font-size: 10px;">meta</a> <a href="/tags/webpack4/" style="font-size: 15px;">webpack4</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a> <a href="/tags/总结/" style="font-size: 10px;">总结</a> <a href="/tags/摄影/" style="font-size: 10px;">摄影</a> <a href="/tags/日常问题/" style="font-size: 15px;">日常问题</a> <a href="/tags/权力的游戏/" style="font-size: 15px;">权力的游戏</a> <a href="/tags/杭州/" style="font-size: 10px;">杭州</a> <a href="/tags/麦理浩径/" style="font-size: 10px;">麦理浩径</a>
+        <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/CSS3/" style="font-size: 15px;">CSS3</a> <a href="/tags/HTML5/" style="font-size: 10px;">HTML5</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/VUE/" style="font-size: 20px;">VUE</a> <a href="/tags/meta/" style="font-size: 10px;">meta</a> <a href="/tags/webpack4/" style="font-size: 15px;">webpack4</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a> <a href="/tags/总结/" style="font-size: 10px;">总结</a> <a href="/tags/摄影/" style="font-size: 10px;">摄影</a> <a href="/tags/日常问题/" style="font-size: 20px;">日常问题</a> <a href="/tags/权力的游戏/" style="font-size: 15px;">权力的游戏</a> <a href="/tags/杭州/" style="font-size: 10px;">杭州</a> <a href="/tags/麦理浩径/" style="font-size: 10px;">麦理浩径</a>
     </div>
 </div>
 
@@ -611,6 +611,25 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2020/11/16/complicatedTable/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Vue + Element 怎么画复杂的表格？">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-11-16T07:53:46.000Z">2020-11-16</time></div>
+                    <a href="/2020/11/16/complicatedTable/" class="has-link-black-ter is-size-6">Vue + Element 怎么画复杂的表格？</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/开发/">开发</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -688,25 +707,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/11/13/vue-lifecycle/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="https://user-images.githubusercontent.com/36074045/67406289-75dac480-f5e8-11e9-9636-3e53b8a01957.jpg" alt="vue实例的生命周期">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-13T13:19:34.000Z">2019-11-13</time></div>
-                    <a href="/2019/11/13/vue-lifecycle/" class="has-link-black-ter is-size-6">vue实例的生命周期</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/前端/">前端</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -718,6 +718,17 @@
             归档
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/11/">
+                <span class="level-start">
+                    <span class="level-item">十一月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2020/01/">
@@ -904,7 +915,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/日常问题/">
                         <span class="tag">日常问题</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 
@@ -954,6 +965,25 @@
         
         <article class="media">
             
+            <a href="/2020/11/16/complicatedTable/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Vue + Element 怎么画复杂的表格？">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-11-16T07:53:46.000Z">2020-11-16</time></div>
+                    <a href="/2020/11/16/complicatedTable/" class="has-link-black-ter is-size-6">Vue + Element 怎么画复杂的表格？</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/开发/">开发</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2020/01/16/eslintNotice/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="eslint错误提示">
@@ -1028,25 +1058,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2019/11/13/vue-lifecycle/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="https://user-images.githubusercontent.com/36074045/67406289-75dac480-f5e8-11e9-9636-3e53b8a01957.jpg" alt="vue实例的生命周期">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-11-13T13:19:34.000Z">2019-11-13</time></div>
-                    <a href="/2019/11/13/vue-lifecycle/" class="has-link-black-ter is-size-6">vue实例的生命周期</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/前端/">前端</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1058,6 +1069,17 @@
             归档
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/11/">
+                <span class="level-start">
+                    <span class="level-item">十一月 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2020/01/">
@@ -1244,7 +1266,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/日常问题/">
                         <span class="tag">日常问题</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">3</span>
                     </a>
                 </div>
                 
