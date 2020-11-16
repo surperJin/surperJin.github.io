@@ -177,7 +177,7 @@
             
         </h1>
         <div class="content">
-            <h2 id="日历"><a href="#日历" class="headerlink" title="日历"></a>日历</h2><p>创建过去七天的数组，如果将代码中的减号换成加号，你将得到未来7天的数组集合<br><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[...Array(<span class="hljs-number">7</span>).keys()].map(<span class="hljs-function"><span class="hljs-params">days</span> =&gt;</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-built_in">Date</span>.now() - <span class="hljs-number">86400000</span> * days));</span><br></pre></td></tr></table></figure></p>
+            <h2 id="日历"><a href="#日历" class="headerlink" title="日历"></a>日历</h2><p>创建过去七天的数组，如果将代码中的减号换成加号，你将得到未来7天的数组集合<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[...Array(<span class="number">7</span>).keys()].map(<span class="function"><span class="params">days</span> =&gt;</span> <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="built_in">Date</span>.now() - <span class="number">86400000</span> * days));</span><br></pre></td></tr></table></figure></p>
         </div>
         
         
