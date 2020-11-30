@@ -130,17 +130,27 @@
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
     <div class="card">
     
+    <div class="card-image">
+        <a href="/2020/11/30/x-scrollTable/" class="image is-7by1">
+            <img class="thumbnail" src="https://picjumbo.com/wp-content/uploads/the-san-francisco-golden-gate-bridge-captured-from-airplane_free_stock_photos_picjumbo_HNCK2632-1080x720.jpg" alt="横向滑动的动态表格">
+        </a>
+    </div>
+    
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-11-27T07:04:23.000Z">2020-11-27</time>
+                <time class="level-item has-text-grey" datetime="2020-11-30T06:23:36.000Z">2020-11-30</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/前端/">前端</a>
+                </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    几秒 读完 (大约 0 个字)
+                    1 分钟 读完 (大约 114 个字)
                 </span>
                 
                 
@@ -149,13 +159,74 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2020/11/27/ifStatementSimp/">ifStatementSimp</a>
+                <a class="has-link-black-ter" href="/2020/11/30/x-scrollTable/">横向滑动的动态表格</a>
             
         </h1>
         <div class="content">
-            
+            <a id="more"></a>
+<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">&lt;!--HTML部分--&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">border</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tab_css_1"</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>姓名<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>电话<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>作业内容<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>证书<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;/<span class="hljs-name">thead</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">"(item,index) of result"</span> <span class="hljs-attr">:key</span>=<span class="hljs-string">"index"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tr_css"</span> <span class="hljs-attr">align</span>=<span class="hljs-string">"center"</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>&#123;&#123;item.name&#125;&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fw-300"</span>&gt;</span>&#123;&#123;item.tel&#125;&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span></span><br><span class="line">                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"请输入作业内容"</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>&#123;&#123;item.certificate&#125;&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">/*CSS部分*/</span></span><br><span class="line"><span class="hljs-selector-tag">table</span> <span class="hljs-selector-tag">th</span>&#123;</span><br><span class="line">    <span class="hljs-attribute">white-space</span>: nowrap;</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-selector-tag">table</span> <span class="hljs-selector-tag">td</span>&#123;</span><br><span class="line">    <span class="hljs-attribute">white-space</span>: nowrap;</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-selector-tag">body</span>,<span class="hljs-selector-tag">table</span>&#123;</span><br><span class="line">    <span class="hljs-attribute">font-size</span>:<span class="hljs-number">12px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-selector-tag">table</span>&#123;</span><br><span class="line">    <span class="hljs-attribute">empty-cells</span>:show;</span><br><span class="line">    <span class="hljs-attribute">border-collapse</span>: collapse;</span><br><span class="line">    <span class="hljs-attribute">margin</span>:<span class="hljs-number">0</span> auto;</span><br><span class="line">    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-selector-tag">h1</span>,<span class="hljs-selector-tag">h2</span>,<span class="hljs-selector-tag">h3</span>&#123;</span><br><span class="line">    <span class="hljs-attribute">font-size</span>:<span class="hljs-number">12px</span>;</span><br><span class="line">    <span class="hljs-attribute">margin</span>:<span class="hljs-number">0</span>;</span><br><span class="line">    <span class="hljs-attribute">padding</span>:<span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-selector-tag">table</span><span class="hljs-selector-class">.tab_css_1</span>&#123;</span><br><span class="line">    <span class="hljs-attribute">border</span>:<span class="hljs-number">1px</span> solid <span class="hljs-number">#cad9ea</span>;</span><br><span class="line">    <span class="hljs-attribute">color</span>:<span class="hljs-number">#666</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-selector-tag">table</span><span class="hljs-selector-class">.tab_css_1</span> <span class="hljs-selector-tag">th</span> &#123;</span><br><span class="line">    <span class="hljs-comment">/*background-image: url("th_bg1.gif");*/</span></span><br><span class="line">    <span class="hljs-attribute">background-repeat</span>:repeat-x;</span><br><span class="line">    <span class="hljs-attribute">height</span>:<span class="hljs-number">30px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-selector-tag">table</span><span class="hljs-selector-class">.tab_css_1</span> <span class="hljs-selector-tag">td</span>,</span><br><span class="line"><span class="hljs-selector-tag">table</span><span class="hljs-selector-class">.tab_css_1</span> <span class="hljs-selector-tag">th</span>&#123;</span><br><span class="line">    <span class="hljs-attribute">border</span>:<span class="hljs-number">1px</span> solid <span class="hljs-number">#cad9ea</span>;</span><br><span class="line">    <span class="hljs-attribute">padding</span>:<span class="hljs-number">0</span> <span class="hljs-number">1em</span> <span class="hljs-number">0</span>;</span><br><span class="line">    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#f6fbff</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-selector-tag">table</span><span class="hljs-selector-class">.tab_css_1</span> <span class="hljs-selector-tag">tr</span><span class="hljs-selector-class">.tr_css</span>&#123;</span><br><span class="line">    <span class="hljs-attribute">background-color</span>:<span class="hljs-number">#f5fafe</span>;</span><br><span class="line">    <span class="hljs-attribute">height</span>:<span class="hljs-number">30px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
         </div>
         
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-image">
+        <a href="/2020/11/27/ifStatementSimp/" class="image is-7by1">
+            <img class="thumbnail" src="https://picjumbo.com/wp-content/uploads/D0104472-1080x720.jpg" alt="if语句化繁为简">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-11-27T07:04:23.000Z">2020-11-27</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/前端/">前端</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 分钟 读完 (大约 298 个字)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/11/27/ifStatementSimp/">if语句化繁为简</a>
+            
+        </h1>
+        <div class="content">
+            <p>我们经常会在处理数据时碰到需要把某个值转化成中文，那么这么写的话就会显得有点呆😂<br></p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2020/11/27/ifStatementSimp/#more">阅读更多</a>
+                </div>
+            </div>
+        </div>
         
         
     </div>
@@ -631,65 +702,6 @@
 
 
 
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/2019/11/13/vue-lifecycle/" class="image is-7by1">
-            <img class="thumbnail" src="https://picjumbo.com/wp-content/uploads/DSC03996-1080x720.jpg" alt="vue实例的生命周期">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-11-13T13:19:34.000Z">2019-11-13</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/前端/">前端</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    2 分钟 读完 (大约 315 个字)
-                </span>
-                
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/11/13/vue-lifecycle/">vue实例的生命周期</a>
-            
-        </h1>
-        <div class="content">
-            <blockquote>
-<p>&emsp;&emsp;生命周期函数就是vue实例在某一个时间点会自动执行函数（它并不放在methods里面，而是单独的在vue的实例里）<br></p></blockquote>
-        </div>
-        
-        
-        <div class="level is-mobile">
-            <div class="level-start">
-                <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/11/13/vue-lifecycle/#more">阅读更多</a>
-                </div>
-            </div>
-        </div>
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
 
     
 <div class="card card-transparent">
@@ -762,7 +774,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        25
+                        26
                     </p>
                 </div>
             </div>
@@ -889,7 +901,7 @@
                 <span class="level-item">前端</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">12</span>
+                <span class="level-item tag">14</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/博客/">
@@ -959,7 +971,7 @@
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/CSS3/" style="font-size: 13.33px;">CSS3</a> <a href="/tags/HTML5/" style="font-size: 10px;">HTML5</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/VUE/" style="font-size: 20px;">VUE</a> <a href="/tags/meta/" style="font-size: 10px;">meta</a> <a href="/tags/webpack4/" style="font-size: 13.33px;">webpack4</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a> <a href="/tags/总结/" style="font-size: 10px;">总结</a> <a href="/tags/摄影/" style="font-size: 10px;">摄影</a> <a href="/tags/日常问题/" style="font-size: 16.67px;">日常问题</a> <a href="/tags/权力的游戏/" style="font-size: 13.33px;">权力的游戏</a> <a href="/tags/杭州/" style="font-size: 10px;">杭州</a> <a href="/tags/麦理浩径/" style="font-size: 10px;">麦理浩径</a>
+        <a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a> <a href="/tags/CSS3/" style="font-size: 13.33px;">CSS3</a> <a href="/tags/HTML5/" style="font-size: 10px;">HTML5</a> <a href="/tags/JavaScript/" style="font-size: 13.33px;">JavaScript</a> <a href="/tags/VUE/" style="font-size: 20px;">VUE</a> <a href="/tags/meta/" style="font-size: 10px;">meta</a> <a href="/tags/webpack4/" style="font-size: 13.33px;">webpack4</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a> <a href="/tags/总结/" style="font-size: 10px;">总结</a> <a href="/tags/摄影/" style="font-size: 10px;">摄影</a> <a href="/tags/日常问题/" style="font-size: 16.67px;">日常问题</a> <a href="/tags/权力的游戏/" style="font-size: 13.33px;">权力的游戏</a> <a href="/tags/杭州/" style="font-size: 10px;">杭州</a> <a href="/tags/麦理浩径/" style="font-size: 10px;">麦理浩径</a>
     </div>
 </div>
 
@@ -976,18 +988,37 @@
         
         <article class="media">
             
+            <a href="/2020/11/30/x-scrollTable/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="https://picjumbo.com/wp-content/uploads/the-san-francisco-golden-gate-bridge-captured-from-airplane_free_stock_photos_picjumbo_HNCK2632-1080x720.jpg" alt="横向滑动的动态表格">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-11-30T06:23:36.000Z">2020-11-30</time></div>
+                    <a href="/2020/11/30/x-scrollTable/" class="has-link-black-ter is-size-6">横向滑动的动态表格</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/前端/">前端</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2020/11/27/ifStatementSimp/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="ifStatementSimp">
+                    <img class="thumbnail" src="https://picjumbo.com/wp-content/uploads/D0104472-1080x720.jpg" alt="if语句化繁为简">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-11-27T07:04:23.000Z">2020-11-27</time></div>
-                    <a href="/2020/11/27/ifStatementSimp/" class="has-link-black-ter is-size-6">ifStatementSimp</a>
+                    <a href="/2020/11/27/ifStatementSimp/" class="has-link-black-ter is-size-6">if语句化繁为简</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/前端/">前端</a>
                     </p>
                 </div>
             </div>
@@ -1050,25 +1081,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2020/08/16/vue-Bmap/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="https://picjumbo.com/wp-content/uploads/manarola-most-beautiful-village-1080x720.jpg" alt="如何在vue项目中使用百度地图，并且计算两点间的里程数？">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-08-16T11:28:51.000Z">2020-08-16</time></div>
-                    <a href="/2020/08/16/vue-Bmap/" class="has-link-black-ter is-size-6">如何在vue项目中使用百度地图，并且计算两点间的里程数？</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/百度地图/">百度地图</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1087,7 +1099,7 @@
                     <span class="level-item">十一月 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -1218,7 +1230,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/CSS/">
                         <span class="tag">CSS</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -1239,7 +1251,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/JavaScript/">
                         <span class="tag">JavaScript</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -1338,18 +1350,37 @@
         
         <article class="media">
             
+            <a href="/2020/11/30/x-scrollTable/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="https://picjumbo.com/wp-content/uploads/the-san-francisco-golden-gate-bridge-captured-from-airplane_free_stock_photos_picjumbo_HNCK2632-1080x720.jpg" alt="横向滑动的动态表格">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-11-30T06:23:36.000Z">2020-11-30</time></div>
+                    <a href="/2020/11/30/x-scrollTable/" class="has-link-black-ter is-size-6">横向滑动的动态表格</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/前端/">前端</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2020/11/27/ifStatementSimp/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="ifStatementSimp">
+                    <img class="thumbnail" src="https://picjumbo.com/wp-content/uploads/D0104472-1080x720.jpg" alt="if语句化繁为简">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-11-27T07:04:23.000Z">2020-11-27</time></div>
-                    <a href="/2020/11/27/ifStatementSimp/" class="has-link-black-ter is-size-6">ifStatementSimp</a>
+                    <a href="/2020/11/27/ifStatementSimp/" class="has-link-black-ter is-size-6">if语句化繁为简</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/前端/">前端</a>
                     </p>
                 </div>
             </div>
@@ -1412,25 +1443,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2020/08/16/vue-Bmap/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="https://picjumbo.com/wp-content/uploads/manarola-most-beautiful-village-1080x720.jpg" alt="如何在vue项目中使用百度地图，并且计算两点间的里程数？">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-08-16T11:28:51.000Z">2020-08-16</time></div>
-                    <a href="/2020/08/16/vue-Bmap/" class="has-link-black-ter is-size-6">如何在vue项目中使用百度地图，并且计算两点间的里程数？</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/百度地图/">百度地图</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1449,7 +1461,7 @@
                     <span class="level-item">十一月 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -1580,7 +1592,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/CSS/">
                         <span class="tag">CSS</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 
@@ -1601,7 +1613,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/JavaScript/">
                         <span class="tag">JavaScript</span>
-                        <span class="tag is-grey">1</span>
+                        <span class="tag is-grey">2</span>
                     </a>
                 </div>
                 

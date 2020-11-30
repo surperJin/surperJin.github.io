@@ -2,24 +2,25 @@
 <html lang="zh">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>love artist, love code.</title>
+<title>横向滑动的动态表格 - love artist, love code.</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="&amp;ensp;前端 ▪ 前端工程规范 ▪ 开源中国 ▪ 凹凸实验室 ▪ 百度EUX ▪ 前端开发资源库 &amp;ensp;设计类 ▪ 免费可商用图库  pixitepixabayunsplashfoodiesfeed（美食图片）picjumbolifeofpix（高分辨率摄影图）gratisography（搞怪风格）stocksnap  ▪ 视频素材(免费可商用) ▪ 音频素材(免费可商用) ▪ 图片压缩">
-<meta property="og:type" content="website">
-<meta property="og:title" content="love artist, love code.">
-<meta property="og:url" content="http://yoursite.com/resource/index.html">
+    <meta name="description" content="12345678910111213141516171819&amp;lt;!--HTML部分--&amp;gt;&amp;lt;table border=&quot;1&quot; class=&quot;tab_css_1&quot;&amp;gt;    &amp;lt;div&amp;gt;        &amp;lt;thead&amp;gt;        &amp;lt;th&amp;gt;姓名&amp;lt;/th&amp;gt;        &amp;lt;th&amp;gt;电话&amp;lt;/th&amp;gt;        &amp;lt">
+<meta name="keywords" content="CSS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="横向滑动的动态表格">
+<meta property="og:url" content="http://yoursite.com/2020/11/30/x-scrollTable/index.html">
 <meta property="og:site_name" content="love artist, love code.">
-<meta property="og:description" content="&amp;ensp;前端 ▪ 前端工程规范 ▪ 开源中国 ▪ 凹凸实验室 ▪ 百度EUX ▪ 前端开发资源库 &amp;ensp;设计类 ▪ 免费可商用图库  pixitepixabayunsplashfoodiesfeed（美食图片）picjumbolifeofpix（高分辨率摄影图）gratisography（搞怪风格）stocksnap  ▪ 视频素材(免费可商用) ▪ 音频素材(免费可商用) ▪ 图片压缩">
+<meta property="og:description" content="12345678910111213141516171819&amp;lt;!--HTML部分--&amp;gt;&amp;lt;table border=&quot;1&quot; class=&quot;tab_css_1&quot;&amp;gt;    &amp;lt;div&amp;gt;        &amp;lt;thead&amp;gt;        &amp;lt;th&amp;gt;姓名&amp;lt;/th&amp;gt;        &amp;lt;th&amp;gt;电话&amp;lt;/th&amp;gt;        &amp;lt">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-09-23T07:55:42.642Z">
+<meta property="og:image" content="https://picjumbo.com/wp-content/uploads/the-san-francisco-golden-gate-bridge-captured-from-airplane_free_stock_photos_picjumbo_HNCK2632-1080x720.jpg">
+<meta property="og:updated_time" content="2020-11-30T06:34:08.171Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="love artist, love code.">
-<meta name="twitter:description" content="&amp;ensp;前端 ▪ 前端工程规范 ▪ 开源中国 ▪ 凹凸实验室 ▪ 百度EUX ▪ 前端开发资源库 &amp;ensp;设计类 ▪ 免费可商用图库  pixitepixabayunsplashfoodiesfeed（美食图片）picjumbolifeofpix（高分辨率摄影图）gratisography（搞怪风格）stocksnap  ▪ 视频素材(免费可商用) ▪ 音频素材(免费可商用) ▪ 图片压缩">
-<meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
+<meta name="twitter:title" content="横向滑动的动态表格">
+<meta name="twitter:description" content="12345678910111213141516171819&amp;lt;!--HTML部分--&amp;gt;&amp;lt;table border=&quot;1&quot; class=&quot;tab_css_1&quot;&amp;gt;    &amp;lt;div&amp;gt;        &amp;lt;thead&amp;gt;        &amp;lt;th&amp;gt;姓名&amp;lt;/th&amp;gt;        &amp;lt;th&amp;gt;电话&amp;lt;/th&amp;gt;        &amp;lt">
+<meta name="twitter:image" content="https://picjumbo.com/wp-content/uploads/the-san-francisco-golden-gate-bridge-captured-from-airplane_free_stock_photos_picjumbo_HNCK2632-1080x720.jpg">
 
 
 
@@ -97,7 +98,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo1.svg" alt height="28">
+                <img src="/images/logo1.svg" alt="横向滑动的动态表格" height="28">
             
             </a>
         </div>
@@ -109,7 +110,7 @@
                 
                 <a class="navbar-item" href="/archives">归档</a>
                 
-                <a class="navbar-item is-active" href="/resource">素材资源</a>
+                <a class="navbar-item" href="/resource">素材资源</a>
                 
                 <a class="navbar-item" href="/about">关于</a>
                 
@@ -133,45 +134,57 @@
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
     
+    <div class="card-image">
+        <span class="image is-7by1">
+            <img class="thumbnail" src="https://picjumbo.com/wp-content/uploads/the-san-francisco-golden-gate-bridge-captured-from-airplane_free_stock_photos_picjumbo_HNCK2632-1080x720.jpg" alt="横向滑动的动态表格">
+        </span>
+    </div>
+    
     <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-11-30T06:23:36.000Z">2020-11-30</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/前端/">前端</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    1 分钟 读完 (大约 114 个字)
+                </span>
+                
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span>次访问
+                </span>
+                
+            </div>
+        </div>
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                
+                横向滑动的动态表格
             
         </h1>
         <div class="content">
-            <h3 id="ensp-前端"><a href="#ensp-前端" class="headerlink" title="&ensp;前端"></a><i class="fas fa-quote-left fa-1x fa-pull-left"></i>&ensp;前端</h3><hr>
-<p>▪ <a href="https://haonancx.gitbooks.io/fees/content/" target="_blank" rel="noopener">前端工程规范</a></p>
-<p>▪ <a href="http://tool.oschina.net/" target="_blank" rel="noopener">开源中国</a></p>
-<p>▪ <a href="https://aotu.io/" target="_blank" rel="noopener">凹凸实验室</a></p>
-<p>▪ <a href="http://eux.baidu.com/" target="_blank" rel="noopener">百度EUX</a></p>
-<p>▪ <a href="https://www.awesomes.cn/" target="_blank" rel="noopener">前端开发资源库</a></p>
-<h3 id="ensp-设计类"><a href="#ensp-设计类" class="headerlink" title="&ensp;设计类"></a><i class="fas fa-quote-left fa-1x fa-pull-left"></i>&ensp;设计类</h3><hr>
-<p>▪ 免费可商用图库</p>
-<blockquote>
-<p><a href="http://source.pixite.co/" target="_blank" rel="noopener">pixite</a><br><br><a href="https://pixabay.com/" target="_blank" rel="noopener">pixabay</a><br><br><a href="https://unsplash.com/" target="_blank" rel="noopener">unsplash</a><br><br><a href="https://www.foodiesfeed.com/" target="_blank" rel="noopener">foodiesfeed</a>（美食图片）<br><br><a href="https://picjumbo.com/" target="_blank" rel="noopener">picjumbo</a><br><br><a href="https://www.lifeofpix.com/gallery/" target="_blank" rel="noopener">lifeofpix</a>（高分辨率摄影图）<br><br><a href="https://gratisography.com/" target="_blank" rel="noopener">gratisography</a>（搞怪风格）<br><br><a href="https://stocksnap.io/" target="_blank" rel="noopener">stocksnap</a><br></p>
-</blockquote>
-<p>▪ <a href="https://mixkit.co/" target="_blank" rel="noopener">视频素材</a>(免费可商用)</p>
-<p>▪ <a href="http://source.pixite.co/" target="_blank" rel="noopener">音频素材</a>(免费可商用)</p>
-<p>▪ <a href="https://tinypng.com/" target="_blank" rel="noopener">图片压缩工具</a></p>
-<p>▪ <a href="http://www.shufazidian.com/" target="_blank" rel="noopener">书法字典网</a></p>
-<p>▪ <a href="https://isoflat.com/" target="_blank" rel="noopener">2.5D风格矢量插画</a></p>
-<p>▪ <a href="https://undraw.co/illustrations" target="_blank" rel="noopener">扁平化风格插画</a></p>
-<p>▪ <a href="https://icons8.com/ouch?ref=lapaninja" target="_blank" rel="noopener">开源插画素材1</a></p>
-<p>▪ <a href="https://iradesign.io/gallery/illustrations" target="_blank" rel="noopener">开源插画素材2</a></p>
-<p>▪ <a href="https://mixkit.co/art/" target="_blank" rel="noopener">免费插画素材库</a></p>
-<p>▪ <a href="https://stubborn.fun/" target="_blank" rel="noopener">免费扁平元素</a></p>
-<p>▪ <a href="https://www.kapwing.com/404-illustrations" target="_blank" rel="noopener">免费404页面插画素材库</a></p>
-<h3 id="ensp-图标"><a href="#ensp-图标" class="headerlink" title="&ensp;图标"></a><i class="fas fa-quote-left fa-1x fa-pull-left"></i>&ensp;图标</h3><hr>
-<p>▪ <a href="https://tilda.cc/free-icons/" target="_blank" rel="noopener">tilda</a></p>
-<p>▪ <a href="https://www.iconfont.cn/collections/index?spm=a313x.7781069.1998910419.3" target="_blank" rel="noopener">iconfont</a></p>
-<p>▪ <a href="https://icomoon.io/app/#/select" target="_blank" rel="noopener">icomoon</a></p>
-<p>▪ <a href="https://www.iconfinder.com/" target="_blank" rel="noopener">iconfinder</a></p>
-<p>▪ <a href="https://icons8.cn/metro/" target="_blank" rel="noopener">icons8</a></p>
-<p>▪ <a href="http://fontawesome.dashgame.com/" target="_blank" rel="noopener">fontawesome</a></p>
-<p>▪ <a href="https://ikonate.com/" target="_blank" rel="noopener">Ikonate</a></p>
+            <a id="more"></a>
+<figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">&lt;!--HTML部分--&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">border</span>=<span class="hljs-string">"1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tab_css_1"</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">thead</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>姓名<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>电话<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>作业内容<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">th</span>&gt;</span>证书<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;/<span class="hljs-name">thead</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span> <span class="hljs-attr">v-for</span>=<span class="hljs-string">"(item,index) of result"</span> <span class="hljs-attr">:key</span>=<span class="hljs-string">"index"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"tr_css"</span> <span class="hljs-attr">align</span>=<span class="hljs-string">"center"</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>&#123;&#123;item.name&#125;&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fw-300"</span>&gt;</span>&#123;&#123;item.tel&#125;&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span></span><br><span class="line">                <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"请输入作业内容"</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span></span><br><span class="line">            <span class="hljs-tag">&lt;<span class="hljs-name">td</span>&gt;</span>&#123;&#123;item.certificate&#125;&#125;<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span></span><br><span class="line">        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">/*CSS部分*/</span></span><br><span class="line"><span class="hljs-selector-tag">table</span> <span class="hljs-selector-tag">th</span>&#123;</span><br><span class="line">    <span class="hljs-attribute">white-space</span>: nowrap;</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-selector-tag">table</span> <span class="hljs-selector-tag">td</span>&#123;</span><br><span class="line">    <span class="hljs-attribute">white-space</span>: nowrap;</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-selector-tag">body</span>,<span class="hljs-selector-tag">table</span>&#123;</span><br><span class="line">    <span class="hljs-attribute">font-size</span>:<span class="hljs-number">12px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-selector-tag">table</span>&#123;</span><br><span class="line">    <span class="hljs-attribute">empty-cells</span>:show;</span><br><span class="line">    <span class="hljs-attribute">border-collapse</span>: collapse;</span><br><span class="line">    <span class="hljs-attribute">margin</span>:<span class="hljs-number">0</span> auto;</span><br><span class="line">    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-selector-tag">h1</span>,<span class="hljs-selector-tag">h2</span>,<span class="hljs-selector-tag">h3</span>&#123;</span><br><span class="line">    <span class="hljs-attribute">font-size</span>:<span class="hljs-number">12px</span>;</span><br><span class="line">    <span class="hljs-attribute">margin</span>:<span class="hljs-number">0</span>;</span><br><span class="line">    <span class="hljs-attribute">padding</span>:<span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-selector-tag">table</span><span class="hljs-selector-class">.tab_css_1</span>&#123;</span><br><span class="line">    <span class="hljs-attribute">border</span>:<span class="hljs-number">1px</span> solid <span class="hljs-number">#cad9ea</span>;</span><br><span class="line">    <span class="hljs-attribute">color</span>:<span class="hljs-number">#666</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-selector-tag">table</span><span class="hljs-selector-class">.tab_css_1</span> <span class="hljs-selector-tag">th</span> &#123;</span><br><span class="line">    <span class="hljs-comment">/*background-image: url("th_bg1.gif");*/</span></span><br><span class="line">    <span class="hljs-attribute">background-repeat</span>:repeat-x;</span><br><span class="line">    <span class="hljs-attribute">height</span>:<span class="hljs-number">30px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-selector-tag">table</span><span class="hljs-selector-class">.tab_css_1</span> <span class="hljs-selector-tag">td</span>,</span><br><span class="line"><span class="hljs-selector-tag">table</span><span class="hljs-selector-class">.tab_css_1</span> <span class="hljs-selector-tag">th</span>&#123;</span><br><span class="line">    <span class="hljs-attribute">border</span>:<span class="hljs-number">1px</span> solid <span class="hljs-number">#cad9ea</span>;</span><br><span class="line">    <span class="hljs-attribute">padding</span>:<span class="hljs-number">0</span> <span class="hljs-number">1em</span> <span class="hljs-number">0</span>;</span><br><span class="line">    <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#f6fbff</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-selector-tag">table</span><span class="hljs-selector-class">.tab_css_1</span> <span class="hljs-selector-tag">tr</span><span class="hljs-selector-class">.tr_css</span>&#123;</span><br><span class="line">    <span class="hljs-attribute">background-color</span>:<span class="hljs-number">#f5fafe</span>;</span><br><span class="line">    <span class="hljs-attribute">height</span>:<span class="hljs-number">30px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/CSS/">CSS</a>
+                </div>
+            </div>
         </div>
         
         
@@ -211,6 +224,20 @@
 </div>
 
 
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/11/27/ifStatementSimp/">
+                <span class="level-item">if语句化繁为简</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
 
 
 </div>
@@ -1188,7 +1215,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo1.svg" alt height="28">
+                    <img src="/images/logo1.svg" alt="横向滑动的动态表格" height="28">
                 
                 </a>
                 <p class="is-size-7">
