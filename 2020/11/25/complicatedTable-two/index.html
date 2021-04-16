@@ -7,20 +7,20 @@
 
 
 
-    <meta name="description" content="上一篇博主讲解了如何用 Vue + Element 画出复杂的表格，今天再讲一个类似的，但是难度没有之前那个表格大，主要整理一下思路。">
+    <meta name="description" content="上一篇博主讲解了如何用 Vue + Element 画出复杂的表格，今天再讲一个类似的，但是难度没有之前那个表格大，主要整理一下思路。源码：https://github.com/surperJin/vue-element-table">
 <meta name="keywords" content="日常问题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vue + Element 画复杂表格（2）？">
 <meta property="og:url" content="http://yoursite.com/2020/11/25/complicatedTable-two/index.html">
 <meta property="og:site_name" content="love artist, love code.">
-<meta property="og:description" content="上一篇博主讲解了如何用 Vue + Element 画出复杂的表格，今天再讲一个类似的，但是难度没有之前那个表格大，主要整理一下思路。">
+<meta property="og:description" content="上一篇博主讲解了如何用 Vue + Element 画出复杂的表格，今天再讲一个类似的，但是难度没有之前那个表格大，主要整理一下思路。源码：https://github.com/surperJin/vue-element-table">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://picjumbo.com/wp-content/uploads/business-free-stock-photo-1080x720.jpg">
-<meta property="og:updated_time" content="2020-11-25T08:42:58.311Z">
+<meta property="og:image" content="https://images.unsplash.com/photo-1615750198206-6e632e147ef9?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNDN8fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+<meta property="og:updated_time" content="2021-04-16T08:32:15.735Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue + Element 画复杂表格（2）？">
-<meta name="twitter:description" content="上一篇博主讲解了如何用 Vue + Element 画出复杂的表格，今天再讲一个类似的，但是难度没有之前那个表格大，主要整理一下思路。">
-<meta name="twitter:image" content="https://picjumbo.com/wp-content/uploads/business-free-stock-photo-1080x720.jpg">
+<meta name="twitter:description" content="上一篇博主讲解了如何用 Vue + Element 画出复杂的表格，今天再讲一个类似的，但是难度没有之前那个表格大，主要整理一下思路。源码：https://github.com/surperJin/vue-element-table">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1615750198206-6e632e147ef9?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNDN8fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
 
 
 
@@ -136,7 +136,7 @@
     
     <div class="card-image">
         <span class="image is-7by1">
-            <img class="thumbnail" src="https://picjumbo.com/wp-content/uploads/business-free-stock-photo-1080x720.jpg" alt="Vue + Element 画复杂表格（2）？">
+            <img class="thumbnail" src="https://images.unsplash.com/photo-1615750198206-6e632e147ef9?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNDN8fHxlbnwwfHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="Vue + Element 画复杂表格（2）？">
         </span>
     </div>
     
@@ -154,7 +154,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    3 分钟 读完 (大约 384 个字)
+                    3 分钟 读完 (大约 394 个字)
                 </span>
                 
                 
@@ -172,7 +172,7 @@
             
         </h1>
         <div class="content">
-            <p>上一篇博主讲解了如何用 Vue + Element 画出复杂的表格，今天再讲一个类似的，但是难度没有之前那个表格大，主要整理一下思路。<br><a id="more"></a></p>
+            <p>上一篇博主讲解了如何用 Vue + Element 画出复杂的表格，今天再讲一个类似的，但是难度没有之前那个表格大，主要整理一下思路。<br>源码：<a href="https://github.com/surperJin/vue-element-table" target="_blank" rel="noopener">https://github.com/surperJin/vue-element-table</a><br><a id="more"></a></p>
 <h3 id="一、需求"><a href="#一、需求" class="headerlink" title="一、需求"></a>一、需求</h3><h4 id="1-如下图所示，横竖两个表头，发射机是动态获取的，而发射管是固定的，每台机器都是10条管子。"><a href="#1-如下图所示，横竖两个表头，发射机是动态获取的，而发射管是固定的，每台机器都是10条管子。" class="headerlink" title="1. 如下图所示，横竖两个表头，发射机是动态获取的，而发射管是固定的，每台机器都是10条管子。"></a>1. 如下图所示，横竖两个表头，发射机是动态获取的，而发射管是固定的，每台机器都是10条管子。</h4><h4 id="2-每台机器都可能有多个连接点，直接展示对应连接点的编号。"><a href="#2-每台机器都可能有多个连接点，直接展示对应连接点的编号。" class="headerlink" title="2. 每台机器都可能有多个连接点，直接展示对应连接点的编号。"></a>2. 每台机器都可能有多个连接点，直接展示对应连接点的编号。</h4><h4 id="3-黑色字体为维持连接的状态，绿色为新加连接的状态，断开状态不展示内容。"><a href="#3-黑色字体为维持连接的状态，绿色为新加连接的状态，断开状态不展示内容。" class="headerlink" title="3. 黑色字体为维持连接的状态，绿色为新加连接的状态，断开状态不展示内容。"></a>3. 黑色字体为维持连接的状态，绿色为新加连接的状态，断开状态不展示内容。</h4><p><img src="https://s3.ax1x.com/2020/11/25/Da26cd.png" alt></p>
 <hr>
 <h3 id="二、思路"><a href="#二、思路" class="headerlink" title="二、思路"></a>二、思路</h3><h4 id="1-实现过程中，最重要的是要-将对象里某个属性的值拆分开，重组装为键。"><a href="#1-实现过程中，最重要的是要-将对象里某个属性的值拆分开，重组装为键。" class="headerlink" title="1. 实现过程中，最重要的是要 将对象里某个属性的值拆分开，重组装为键。"></a>1. 实现过程中，最重要的是要 <strong>将对象里某个属性的值拆分开，重组装为键。</strong></h4><h4 id="2-第一条数据：-emsp-emsp-🅰F01的3号管跟A02的4号管相连，连接状态为1，id为061546545；-emsp-emsp-🅱F01的5号管跟B01的1号管相连，连接状态为2，id为156546545；"><a href="#2-第一条数据：-emsp-emsp-🅰F01的3号管跟A02的4号管相连，连接状态为1，id为061546545；-emsp-emsp-🅱F01的5号管跟B01的1号管相连，连接状态为2，id为156546545；" class="headerlink" title="2. 第一条数据：&emsp;&emsp;🅰F01的3号管跟A02的4号管相连，连接状态为1，id为061546545；&emsp;&emsp;🅱F01的5号管跟B01的1号管相连，连接状态为2，id为156546545；"></a>2. 第一条数据：<br>&emsp;&emsp;🅰F01的3号管跟A02的4号管相连，连接状态为1，id为061546545；<br>&emsp;&emsp;🅱F01的5号管跟B01的1号管相连，连接状态为2，id为156546545；<br></h4><h4 id="emsp-第二条数据：没有连接点"><a href="#emsp-第二条数据：没有连接点" class="headerlink" title="&emsp;第二条数据：没有连接点"></a>&emsp;第二条数据：没有连接点</h4><figure class="highlight javascript hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">fsjFdList: [</span><br><span class="line">	&#123;</span><br><span class="line">		fdCode: <span class="hljs-string">'LBPX3000'</span>,</span><br><span class="line">		fdName: <span class="hljs-string">'普通300'</span>,</span><br><span class="line">		fsjFsg: [<span class="hljs-string">'3-A02-4-1-061546545'</span>,<span class="hljs-string">'5-B01-1-2-156546545'</span>],	</span><br><span class="line">		fsjName: <span class="hljs-string">'F01'</span>,	</span><br><span class="line">	&#125;,</span><br><span class="line">	&#123;</span><br><span class="line">		fdCode: <span class="hljs-string">'LBPX3000'</span>,</span><br><span class="line">		fdName: <span class="hljs-string">'高透100'</span>,</span><br><span class="line">		fsjFsg: [],</span><br><span class="line">		fsjName: <span class="hljs-string">'F02'</span></span><br><span class="line">	&#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
@@ -296,7 +296,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        29
+                        30
                     </p>
                 </div>
             </div>
@@ -361,7 +361,7 @@
             <li>
                 <a class="level is-mobile" href="http://www.ruanyifeng.com/blog/archives.html" target="_blank">
                     <span class="level-left">
-                        <span class="level-item">大神阮一峰</span>
+                        <span class="level-item">阮一峰</span>
                     </span>
                     <span class="level-right">
                         <span class="level-item tag">www.ruanyifeng.com</span>
@@ -510,9 +510,28 @@
         
         <article class="media">
             
+            <a href="/2021/04/16/test/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="test">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-04-16T08:43:48.000Z">2021-04-16</time></div>
+                    <a href="/2021/04/16/test/" class="has-link-black-ter is-size-6">test</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2021/03/05/el-clickcell/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="https://picjumbo.com/wp-content/uploads/independence-day-4th-of-july-fireworks-1080x651.jpg" alt="获取elementUI Table单击的一个单元格的列和行">
+                    <img class="thumbnail" src="https://images.unsplash.com/photo-1615818499660-30bb5816e1c7?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0NXx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="获取elementUI Table单击的一个单元格的列和行">
                 </p>
             </a>
             
@@ -550,7 +569,7 @@
             
             <a href="/2020/12/01/ergodic-denominate/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="https://picjumbo.com/wp-content/uploads/fog-in-snowy-forest-winter-scenery_free_stock_photos_picjumbo_P1010041-1080x720.jpg" alt="如何给“部门”的图标一一对应？">
+                    <img class="thumbnail" src="https://images.unsplash.com/photo-1615860671009-4aaea252bbef?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1MHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="如何给“部门”的图标一一对应？">
                 </p>
             </a>
             
@@ -569,7 +588,7 @@
             
             <a href="/2020/11/30/x-scrollTable/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="https://picjumbo.com/wp-content/uploads/fall-leaves-background-1080x720.jpg" alt="横向滑动的动态表格">
+                    <img class="thumbnail" src="https://images.unsplash.com/photo-1615890500629-7fb57b852765?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1OXx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="横向滑动的动态表格">
                 </p>
             </a>
             
@@ -577,25 +596,6 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-11-30T06:23:36.000Z">2020-11-30</time></div>
                     <a href="/2020/11/30/x-scrollTable/" class="has-link-black-ter is-size-6">横向滑动的动态表格</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/前端/">前端</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2020/11/27/ifStatementSimp/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="https://picjumbo.com/wp-content/uploads/D0104472-1080x720.jpg" alt="if语句化繁为简">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-11-27T07:04:23.000Z">2020-11-27</time></div>
-                    <a href="/2020/11/27/ifStatementSimp/" class="has-link-black-ter is-size-6">if语句化繁为简</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/前端/">前端</a>
                     </p>
@@ -614,6 +614,17 @@
             归档
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2021/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2021</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2021/03/">
@@ -901,9 +912,28 @@
         
         <article class="media">
             
+            <a href="/2021/04/16/test/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="test">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-04-16T08:43:48.000Z">2021-04-16</time></div>
+                    <a href="/2021/04/16/test/" class="has-link-black-ter is-size-6">test</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2021/03/05/el-clickcell/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="https://picjumbo.com/wp-content/uploads/independence-day-4th-of-july-fireworks-1080x651.jpg" alt="获取elementUI Table单击的一个单元格的列和行">
+                    <img class="thumbnail" src="https://images.unsplash.com/photo-1615818499660-30bb5816e1c7?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0NXx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="获取elementUI Table单击的一个单元格的列和行">
                 </p>
             </a>
             
@@ -941,7 +971,7 @@
             
             <a href="/2020/12/01/ergodic-denominate/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="https://picjumbo.com/wp-content/uploads/fog-in-snowy-forest-winter-scenery_free_stock_photos_picjumbo_P1010041-1080x720.jpg" alt="如何给“部门”的图标一一对应？">
+                    <img class="thumbnail" src="https://images.unsplash.com/photo-1615860671009-4aaea252bbef?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1MHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="如何给“部门”的图标一一对应？">
                 </p>
             </a>
             
@@ -960,7 +990,7 @@
             
             <a href="/2020/11/30/x-scrollTable/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="https://picjumbo.com/wp-content/uploads/fall-leaves-background-1080x720.jpg" alt="横向滑动的动态表格">
+                    <img class="thumbnail" src="https://images.unsplash.com/photo-1615890500629-7fb57b852765?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1OXx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="横向滑动的动态表格">
                 </p>
             </a>
             
@@ -968,25 +998,6 @@
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-11-30T06:23:36.000Z">2020-11-30</time></div>
                     <a href="/2020/11/30/x-scrollTable/" class="has-link-black-ter is-size-6">横向滑动的动态表格</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/前端/">前端</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2020/11/27/ifStatementSimp/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="https://picjumbo.com/wp-content/uploads/D0104472-1080x720.jpg" alt="if语句化繁为简">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-11-27T07:04:23.000Z">2020-11-27</time></div>
-                    <a href="/2020/11/27/ifStatementSimp/" class="has-link-black-ter is-size-6">if语句化繁为简</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/前端/">前端</a>
                     </p>
@@ -1005,6 +1016,17 @@
             归档
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2021/04/">
+                <span class="level-start">
+                    <span class="level-item">四月 2021</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2021/03/">
