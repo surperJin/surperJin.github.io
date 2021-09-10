@@ -16,7 +16,7 @@
 <meta property="og:description" content="一、预先准备 注册uniCloud账号，点击这里了解什么是uniCloud。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://images.unsplash.com/photo-1622983473068-37c2e7d04432?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80">
-<meta property="og:updated_time" content="2021-06-08T13:20:58.589Z">
+<meta property="og:updated_time" content="2021-09-07T08:45:50.945Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="手把手教你实现uni-app项目的搭建到发布">
 <meta name="twitter:description" content="一、预先准备 注册uniCloud账号，点击这里了解什么是uniCloud。">
@@ -154,7 +154,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    14 分钟 读完 (大约 2135 个字)
+                    15 分钟 读完 (大约 2175 个字)
                 </span>
                 
                 
@@ -245,9 +245,9 @@
 </tr>
 </tbody>
 </table>
-<p>示例：以下代码只有在微信小程序端展示<br><figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">&lt;!-- #ifdef MP-WEIXIN --&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">v-show</span>=<span class="hljs-string">"!SwiperPictureShow"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"height: 20px;"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span></span><br><span class="line"><span class="hljs-comment">&lt;!-- #endif --&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>示例：以下代码只有在微信小程序端展示<br><figure class="highlight html hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">&lt;!-- #ifdef MP-WEIXIN --&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">view</span>&gt;</span>hello world<span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span></span><br><span class="line"><span class="hljs-comment">&lt;!-- #endif --&gt;</span></span><br></pre></td></tr></table></figure></p>
 <h4 id="2-3-uni-app组件"><a href="#2-3-uni-app组件" class="headerlink" title="2.3 uni-app组件"></a>2.3 uni-app组件</h4><p>在uni-app项目里，是没有<code>&lt;div&gt;</code>、<code>&lt;span&gt;</code>……这些标签的，取而代之的是<code>&lt;view&gt;</code>、<code>&lt;text&gt;</code>、<code>&lt;image&gt;</code>这些它自带的标签。<a href="https://uniapp.dcloud.io/component/view" target="_blank" rel="noopener">传送门</a></p>
-<h4 id="2-4-生命周期"><a href="#2-4-生命周期" class="headerlink" title="2.4 生命周期"></a>2.4 生命周期</h4><p><a href="https://uniapp.dcloud.io/collocation/frame/lifecycle?id=%e5%ba%94%e7%94%a8%e7%94%9f%e5%91%bd%e5%91%a8%e6%9c%9f" target="_blank" rel="noopener">应用生命周期</a></p>
+<h4 id="2-4-生命周期"><a href="#2-4-生命周期" class="headerlink" title="2.4 生命周期"></a>2.4 生命周期</h4><p>👆<a href="https://uniapp.dcloud.io/collocation/frame/lifecycle?id=%e5%ba%94%e7%94%a8%e7%94%9f%e5%91%bd%e5%91%a8%e6%9c%9f" target="_blank" rel="noopener">应用生命周期</a></p>
 <table>
 <thead>
 <tr>
@@ -290,7 +290,7 @@
 </tr>
 </tbody>
 </table>
-<p><a href="https://uniapp.dcloud.io/collocation/frame/lifecycle?id=%e9%a1%b5%e9%9d%a2%e7%94%9f%e5%91%bd%e5%91%a8%e6%9c%9f" target="_blank" rel="noopener">页面生命周期查看这里</a><br><a href="https://uniapp.dcloud.io/collocation/frame/lifecycle?id=%e7%bb%84%e4%bb%b6%e7%94%9f%e5%91%bd%e5%91%a8%e6%9c%9f" target="_blank" rel="noopener">组件生命周期跟Vue生命周期是一样的</a></p>
+<p>👆<a href="https://uniapp.dcloud.io/collocation/frame/lifecycle?id=%e9%a1%b5%e9%9d%a2%e7%94%9f%e5%91%bd%e5%91%a8%e6%9c%9f" target="_blank" rel="noopener">页面生命周期查看这里</a><br>👆<a href="https://uniapp.dcloud.io/collocation/frame/lifecycle?id=%e7%bb%84%e4%bb%b6%e7%94%9f%e5%91%bd%e5%91%a8%e6%9c%9f" target="_blank" rel="noopener">组件生命周期跟Vue生命周期是一样的</a></p>
 <hr>
 <h2 id="三、项目初始化"><a href="#三、项目初始化" class="headerlink" title="三、项目初始化"></a>三、项目初始化</h2><h4 id="3-1-使用HBuilder-X-新建项目"><a href="#3-1-使用HBuilder-X-新建项目" class="headerlink" title="3.1 使用HBuilder X 新建项目"></a>3.1 使用HBuilder X 新建项目</h4><p>在编辑器里新建项目非常方便，不要忘记勾选“启用uniCloud”。<br><img src="https://z3.ax1x.com/2021/06/08/2ruxYQ.png" alt></p>
 <h4 id="3-2-使用vue-cli安装项目"><a href="#3-2-使用vue-cli安装项目" class="headerlink" title="3.2 使用vue-cli安装项目"></a>3.2 使用vue-cli安装项目</h4><blockquote>
@@ -319,7 +319,7 @@
 <h2 id="五、基本配置"><a href="#五、基本配置" class="headerlink" title="五、基本配置"></a>五、基本配置</h2><h4 id="5-1-在初始化项目后，需要鼠标右击“uniCloud”文件夹，关联相应云服务空间"><a href="#5-1-在初始化项目后，需要鼠标右击“uniCloud”文件夹，关联相应云服务空间" class="headerlink" title="5.1 在初始化项目后，需要鼠标右击“uniCloud”文件夹，关联相应云服务空间"></a>5.1 在初始化项目后，需要鼠标右击“uniCloud”文件夹，关联相应云服务空间</h4><p><img src="https://z3.ax1x.com/2021/06/08/2rt94x.png" alt><br><img src="https://z3.ax1x.com/2021/06/08/2rtyqJ.png" alt="已有的云服务空间列表"><br>如果没有云服务空间，我们需要新建一个。<br><img src="https://z3.ax1x.com/2021/06/08/2rNEWV.png" alt></p>
 <h4 id="5-2-这时候，我们可以在根目录下新建components、static文件夹就可以开发了"><a href="#5-2-这时候，我们可以在根目录下新建components、static文件夹就可以开发了" class="headerlink" title="5.2 这时候，我们可以在根目录下新建components、static文件夹就可以开发了"></a>5.2 这时候，我们可以在根目录下新建components、static文件夹就可以开发了</h4><p>页面文件遵循Vue文件规范，components将存放所有组件文件（从<a href="https://ext.dcloud.net.cn/" target="_blank" rel="noopener">插件市场</a>导入到项目内的插件都会在这个文件夹内），static存放静态文件。</p>
 <h4 id="5-3-根目录下的manifest-json文件需要配置AppID"><a href="#5-3-根目录下的manifest-json文件需要配置AppID" class="headerlink" title="5.3 根目录下的manifest.json文件需要配置AppID"></a>5.3 根目录下的<code>manifest.json</code>文件需要配置<strong>AppID</strong></h4><p><img src="https://z3.ax1x.com/2021/06/08/2rL1r6.png" alt></p>
-<h4 id="5-4-微信小程序配置"><a href="#5-4-微信小程序配置" class="headerlink" title="5.4 微信小程序配置"></a>5.4 微信小程序配置</h4><p>将项目运行到微信小程序，这时候会自动弹出微信开发者工具终端。这时一定要配置终端右上角的“详情”，如果不配置，你看到的是“版本管理”按钮，而不是“上传”按钮，这将影响后续的发布工作。<br><img src="https://z3.ax1x.com/2021/06/08/2rOiJH.png" alt></p>
+<h4 id="5-4-微信小程序配置"><a href="#5-4-微信小程序配置" class="headerlink" title="5.4 微信小程序配置"></a>5.4 微信小程序配置</h4><p>将项目运行到微信小程序，这时候会自动弹出微信开发者工具终端。这时一定要配置终端右上角的“详情”，如果不配置，你看到的是“版本管理”按钮，而不是“上传”按钮，这将影响后续的发布工作。<br><img src="https://z3.ax1x.com/2021/06/08/2rOiJH.png" alt><br>参考这里：<a href="https://blog.csdn.net/sloafer/article/details/99716617" target="_blank" rel="noopener">关于微信小程序开发工具没有上传按钮的问题</a></p>
 <hr>
 <h2 id="六、开发"><a href="#六、开发" class="headerlink" title="六、开发"></a>六、开发</h2><h4 id="6-1-数据绑定及事件处理通Vue-js规范"><a href="#6-1-数据绑定及事件处理通Vue-js规范" class="headerlink" title="6.1 数据绑定及事件处理通Vue.js规范"></a>6.1 数据绑定及事件处理通Vue.js规范</h4><h4 id="6-2-数据从哪里来？"><a href="#6-2-数据从哪里来？" class="headerlink" title="6.2 数据从哪里来？"></a>6.2 数据从哪里来？</h4><p>当我们关联云服务空间之后，可以在文件夹<strong>uniCloud -&gt; database</strong>，右击database，创建<code>db_init.json</code>。在<code>db_init.json</code>文件夹下去配置我们的数据。需要注意的是，这里的格式严格按照json格式，必须使用双引号。你的数据<code>mydataList</code>需要有个<code>data</code>包含在里面。<br><figure class="highlight json hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="hljs-attr">"mydataList"</span>: &#123;</span><br><span class="line">        <span class="hljs-attr">"data"</span>: [</span><br><span class="line">            &#123;<span class="hljs-attr">"name"</span>: <span class="hljs-string">"1"</span>&#125;,</span><br><span class="line">            &#123;<span class="hljs-attr">"name"</span>: <span class="hljs-string">"2"</span>&#125;,</span><br><span class="line">            &#123;<span class="hljs-attr">"name"</span>: <span class="hljs-string">"3"</span>&#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>然后右击<code>db_init.json</code>文件夹<strong>初始化云数据库</strong>，这样我们就在云服务空间的云数据库里能看到我们刚才上传的数据了，在需要的时候再从云服务空间调取数据就可以了。</p>
@@ -389,6 +389,13 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2021/08/09/debounce-throttle/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">什么是JavaScript的防抖和节流</span>
+            </a>
+        </div>
+        
         
         <div class="level-end">
             <a class="level level-item has-link-grey  article-nav-next" href="/2021/06/02/waterfall-layout/">
@@ -446,7 +453,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        32
+                        34
                     </p>
                 </div>
             </div>
@@ -573,7 +580,7 @@
                 <span class="level-item">前端</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">18</span>
+                <span class="level-item tag">20</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/博客/">
@@ -643,7 +650,7 @@
         <h3 class="menu-label">
             标签云
         </h3>
-        <a href="/tags/CSS/" style="font-size: 15px;">CSS</a> <a href="/tags/CSS3/" style="font-size: 12.5px;">CSS3</a> <a href="/tags/HTML5/" style="font-size: 10px;">HTML5</a> <a href="/tags/JavaScript/" style="font-size: 12.5px;">JavaScript</a> <a href="/tags/VUE/" style="font-size: 20px;">VUE</a> <a href="/tags/element-ui/" style="font-size: 10px;">element-ui</a> <a href="/tags/meta/" style="font-size: 10px;">meta</a> <a href="/tags/uni-app/" style="font-size: 10px;">uni-app</a> <a href="/tags/webpack4/" style="font-size: 12.5px;">webpack4</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a> <a href="/tags/总结/" style="font-size: 12.5px;">总结</a> <a href="/tags/摄影/" style="font-size: 10px;">摄影</a> <a href="/tags/日常问题/" style="font-size: 17.5px;">日常问题</a> <a href="/tags/权力的游戏/" style="font-size: 12.5px;">权力的游戏</a> <a href="/tags/杭州/" style="font-size: 10px;">杭州</a> <a href="/tags/麦理浩径/" style="font-size: 10px;">麦理浩径</a>
+        <a href="/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/tags/CSS3/" style="font-size: 12px;">CSS3</a> <a href="/tags/HTML5/" style="font-size: 10px;">HTML5</a> <a href="/tags/JavaScript/" style="font-size: 16px;">JavaScript</a> <a href="/tags/VUE/" style="font-size: 20px;">VUE</a> <a href="/tags/element-ui/" style="font-size: 10px;">element-ui</a> <a href="/tags/meta/" style="font-size: 10px;">meta</a> <a href="/tags/uni-app/" style="font-size: 10px;">uni-app</a> <a href="/tags/webpack4/" style="font-size: 12px;">webpack4</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a> <a href="/tags/总结/" style="font-size: 12px;">总结</a> <a href="/tags/摄影/" style="font-size: 10px;">摄影</a> <a href="/tags/日常问题/" style="font-size: 18px;">日常问题</a> <a href="/tags/权力的游戏/" style="font-size: 12px;">权力的游戏</a> <a href="/tags/杭州/" style="font-size: 10px;">杭州</a> <a href="/tags/麦理浩径/" style="font-size: 10px;">麦理浩径</a>
     </div>
 </div>
 
@@ -657,6 +664,44 @@
         <h3 class="menu-label">
             最新文章
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2021/09/08/array-object-methods/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="https://images.unsplash.com/photo-1630903601454-503df7af2459?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1907&amp;q=80" alt="整理日常开发中数组和对象的操作方法">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-09-08T05:22:08.000Z">2021-09-08</time></div>
+                    <a href="/2021/09/08/array-object-methods/" class="has-link-black-ter is-size-6">整理日常开发中数组和对象的操作方法</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/前端/">前端</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2021/08/09/debounce-throttle/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="https://images.unsplash.com/photo-1628487988355-d324c6513d75?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1915&amp;q=80" alt="什么是JavaScript的防抖和节流">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-08-09T09:25:53.000Z">2021-08-09</time></div>
+                    <a href="/2021/08/09/debounce-throttle/" class="has-link-black-ter is-size-6">什么是JavaScript的防抖和节流</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/前端/">前端</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -715,44 +760,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2021/03/05/el-clickcell/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="https://images.unsplash.com/photo-1615818499660-30bb5816e1c7?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0NXx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="获取elementUI Table单击的一个单元格的列和行">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-03-05T08:51:00.000Z">2021-03-05</time></div>
-                    <a href="/2021/03/05/el-clickcell/" class="has-link-black-ter is-size-6">获取elementUI Table单击的一个单元格的列和行</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/前端/">前端</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2020/12/29/2020summary/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="https://picjumbo.com/wp-content/uploads/independence-day-4th-of-july-fireworks-1080x651.jpg" alt="2020总结-2021计划清单">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-12-29T03:00:37.000Z">2020-12-29</time></div>
-                    <a href="/2020/12/29/2020summary/" class="has-link-black-ter is-size-6">2020总结-2021计划清单</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/总结/">总结</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -764,6 +771,28 @@
             归档
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2021/09/">
+                <span class="level-start">
+                    <span class="level-item">九月 2021</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2021/08/">
+                <span class="level-start">
+                    <span class="level-item">八月 2021</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2021/06/">
@@ -967,7 +996,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/JavaScript/">
                         <span class="tag">JavaScript</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">4</span>
                     </a>
                 </div>
                 
@@ -1080,6 +1109,44 @@
         
         <article class="media">
             
+            <a href="/2021/09/08/array-object-methods/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="https://images.unsplash.com/photo-1630903601454-503df7af2459?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1907&amp;q=80" alt="整理日常开发中数组和对象的操作方法">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-09-08T05:22:08.000Z">2021-09-08</time></div>
+                    <a href="/2021/09/08/array-object-methods/" class="has-link-black-ter is-size-6">整理日常开发中数组和对象的操作方法</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/前端/">前端</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2021/08/09/debounce-throttle/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="https://images.unsplash.com/photo-1628487988355-d324c6513d75?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1915&amp;q=80" alt="什么是JavaScript的防抖和节流">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-08-09T09:25:53.000Z">2021-08-09</time></div>
+                    <a href="/2021/08/09/debounce-throttle/" class="has-link-black-ter is-size-6">什么是JavaScript的防抖和节流</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/前端/">前端</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2021/06/08/create-uni-app-project/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="https://images.unsplash.com/photo-1622983473068-37c2e7d04432?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1950&amp;q=80" alt="手把手教你实现uni-app项目的搭建到发布">
@@ -1135,44 +1202,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2021/03/05/el-clickcell/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="https://images.unsplash.com/photo-1615818499660-30bb5816e1c7?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0NXx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=500&amp;q=60" alt="获取elementUI Table单击的一个单元格的列和行">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-03-05T08:51:00.000Z">2021-03-05</time></div>
-                    <a href="/2021/03/05/el-clickcell/" class="has-link-black-ter is-size-6">获取elementUI Table单击的一个单元格的列和行</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/前端/">前端</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2020/12/29/2020summary/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="https://picjumbo.com/wp-content/uploads/independence-day-4th-of-july-fireworks-1080x651.jpg" alt="2020总结-2021计划清单">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-12-29T03:00:37.000Z">2020-12-29</time></div>
-                    <a href="/2020/12/29/2020summary/" class="has-link-black-ter is-size-6">2020总结-2021计划清单</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/总结/">总结</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1184,6 +1213,28 @@
             归档
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2021/09/">
+                <span class="level-start">
+                    <span class="level-item">九月 2021</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2021/08/">
+                <span class="level-start">
+                    <span class="level-item">八月 2021</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2021/06/">
@@ -1387,7 +1438,7 @@
                 <div class="control">
                     <a class="tags has-addons" href="/tags/JavaScript/">
                         <span class="tag">JavaScript</span>
-                        <span class="tag is-grey">2</span>
+                        <span class="tag is-grey">4</span>
                     </a>
                 </div>
                 
